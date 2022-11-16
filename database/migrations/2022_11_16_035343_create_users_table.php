@@ -17,10 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('typedoc');
-            $table->unsignedBigInteger('document');
-            $table->string('namedoc');
+            $table->string('document');
             $table->string('nameem');
-            $table->unsignedBigInteger('numem');
+            $table->string('numem');
             $table->timestamps();
         });
     }

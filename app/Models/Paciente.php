@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Terapia;
 
 class Paciente extends Model
 {
@@ -90,14 +91,14 @@ class Paciente extends Model
     }
 
     //--------------------------------------------------------
-    public function Terapia()
+    public function terapia()
     {
         return $this->hasMany(Terapia::class);
     }
 
     public function getTerapia()
     {
-        return $this->Terapia;
+        return $this->terapia;
     }
 
     public function setTerapia($terapia)

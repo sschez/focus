@@ -22,6 +22,8 @@ return new class extends Migration
             $table->float('extensionMax');
             $table->json('rangos');
             $table->dateTime('fechaCita');
+            $table->unsignedBigInteger('terapia_id');
+            $table->foreign('terapia_id')->references('id')->on('terapias');
             $table->timestamps();
         });
     }

@@ -4,6 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Paciente;
+use App\Models\Sesion;
+use App\Models\User;
 
 class Terapia extends Model
 {
@@ -70,23 +73,23 @@ class Terapia extends Model
     }
 
     //--------------------------------------------------------
-    public function Paciente()
+    public function user()
     {
-        return $this->belongsTo(Paciente::class);
+        return $this->belongsTo(User::class);
     }
 
-    public function getPaciente()
+    public function getUser()
     {
-        return $this->paciente;
+        return $this->user;
     }
 
-    public function setPaciente($paciente)
+    public function setUser($user)
     {
-        $this->paciente = $paciente;
+        $this->user = $user;
     }
 
     //--------------------------------------------------------
-    public function Sesion()
+    public function sesion()
     {
         return $this->hasMany(Sesion::class);
     }
