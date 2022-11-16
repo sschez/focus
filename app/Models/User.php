@@ -2,43 +2,96 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Database\Eloquent\Model;
 
-class User extends Authenticatable
+class User extends Model
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    use HasFactory;
 
     /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-    ];
+     * PRODUCT ATTRIBUTES
+     * $this->attributes['id'] - int - contains the product primary key (id)
+     * $this->attributes['name'] - string - contains the user name
+     * $this->attributes['typedoc'] - string - 
+     * $this->attributes['document'] - int - 
+     * $this->attributes['namedoc'] - string - 
+     * $this->attributes['namem'] - string - 
+     * $this->attributes['numem'] - int - 
+     * $this->attributes['created_at'] - timestamp- 
+     * $this->attributes['updated_at'] - timestamp - 
+    */
 
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
-     */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
+    protected $fillable = ['name','typedoc','document','namedoc','namem','numem'];
 
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array<string, string>
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    public function getId()
+    {
+        return $this->attributes['id'];
+    }
+
+    public function setId($id)
+    {
+        $this->attributes['id'] = $id;
+    }
+
+    public function getName()
+    {
+        return $this->attributes['name'];
+    }
+
+    public function setName($name)
+    {
+        $this->attributes['name'] = $name;
+    }
+
+    public function getTypedoc()
+    {
+        return $this->attributes['typedoc'];
+    }
+
+    public function setTypedoc($typedoc)
+    {
+        $this->attributes['typedoc'] = $typedoc;
+    }
+
+    public function getDocument()
+    {
+        return $this->attributes['document'];
+    }
+
+    public function setDocument($document)
+    {
+        $this->attributes['document'] = $document;
+    }
+
+    public function getNamedoc()
+    {
+        return $this->attributes['namedoc'];
+    }
+
+    public function setNamedoc($namedoc)
+    {
+        $this->attributes['namedoc'] = $namedoc;
+    }
+
+    public function getNameem()
+    {
+        return $this->attributes['nameem'];
+    }
+
+    public function setNameem($nameem)
+    {
+        $this->attributes['nameem'] = $nameem;
+    }
+
+    public function getNumem()
+    {
+        return $this->attributes['numem'];
+    }
+
+    public function setNumem($numem)
+    {
+        $this->attributes['numem'] = $numem;
+    }
+
 }

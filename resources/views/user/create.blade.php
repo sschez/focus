@@ -139,46 +139,8 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
-                    <!-- Topbar Search -->
-                    <form
-                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-
                     <!-- Topbar Navbar -->
-                    <ul class="navbar-nav ml-auto">
-
-                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                        <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                aria-labelledby="searchDropdown">
-                                <form class="form-inline mr-auto w-100 navbar-search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small"
-                                            placeholder="Search for..." aria-label="Search"
-                                            aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-primary" type="button">
-                                                <i class="fas fa-search fa-sm"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </li>                     
+                    <ul class="navbar-nav ml-auto">               
                       
 
                         <div class="topbar-divider d-none d-sm-block"></div>
@@ -236,26 +198,41 @@
                                 </div>
                                 <div class="card-body">                                    
                                 @if($errors->any())
-            <ul id="errors" class="alert alert-danger list-unstyled">
-              @foreach($errors->all() as $error)
-              <li>{{ $error }}</li>
-              @endforeach
-            </ul>
-            @endif
+                                    <ul id="errors" class="alert alert-danger list-unstyled">
+                                    @foreach($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                    @endforeach
+                                    </ul>
+                                    @endif
 
-            <form method="POST" action="{{ route('user.save') }}">
-              @csrf
-              <input type="text" class="form-control mb-2" placeholder="Nombre completo" name="name" value="{{ old('name') }}" />    
-              Tipo de documento:          
-              <input type="radio" required name= "typedoc" value="{{ old('cc') }}" /> C.C
-              <input type="radio" required name= "typedoc" value="{{ old('ti') }}" /> T.I
-              <input type="radio" required name= "typedoc" value="{{ old('ce') }}" /> C.E
-              <input type="text" class="form-control mb-2" placeholder="Numero de documento de identidad" name="doc" value="{{ old('document') }}" />
-              <input type="text" class="form-control mb-2" placeholder="Nombre del doctor" name="namedoc" value="{{ old('namedoc') }}" />
-              <input type="text" class="form-control mb-2" placeholder="Nombre de Contacto Emergencia" name="nameem" value="{{ old('nameem') }}" />
-              <input type="text" class="form-control mb-2" placeholder="Contacto de Emergencia" name="c.eme" value="{{ old('c.emergencia') }}" />
-              <input type="submit" class="crear-paciente-b" value="Crear Paciente" />
-            </form>
+                                    <form method="POST" action="{{ route('user.save') }}">
+                                    @csrf
+                                    <input type="text" class="form-control mb-2" placeholder="Nombre completo" name="name" value="{{ old('name') }}" />    
+                                              
+                                    <label for ="typedoc"> Tipo de documento: </label>
+                                    <select name ="typedoc">
+                                        <option disabled=""> Selecciona una opción </option>
+                                        <option value="cc"> Cédula de Ciudadania </option>
+                                        <option value="ce"> Cédula de Extranjero </option>
+                                        <option value="ti"> Tarejta de Identidad </option>
+                                    </select>
+
+                                    <input type="text" class="form-control mb-2" placeholder="Numero de documento de identidad" name="document" value="{{ old('document') }}" />
+                                   
+                                    <label for ="namedoc"> Nombre del doctor: </label>
+                                    <select name ="namedoc">
+                                        <option disabled=""> Selecciona una opción </option>
+                                        <option value="dd"> Doctor Diego Bustamante</option>
+                                        <option value="da"> Doctor Andres Rincon</option>
+                                        <option value="dj"> Doctor Jorge Zapata</option>
+                                    </select>
+
+                                    <input type="text" class="form-control mb-2" placeholder="Nombre de Contacto Emergencia" name="nameem" value="{{ old('nameem') }}" />
+
+                                    <input type="text" class="form-control mb-2" placeholder="Contacto de Emergencia" name="numem" value="{{ old('c.emergencia') }}" />
+                                    
+                                    <input type="submit" class="crear-paciente-b" value="Crear Paciente" />
+                                    </form>
                                 </div>
                             </div>
 
