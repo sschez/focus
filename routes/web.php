@@ -14,3 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'App\Http\Controllers\HomeController@index')->name("home.index");
+Route::get('/user/create', 'App\Http\Controllers\UserController@create')
+->name("user.create");
+Route::post('/user/save', 'App\Http\Controllers\UserController@save')
+->name("user.save");
