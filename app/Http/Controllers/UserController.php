@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
+
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class UserController extends Controller
 {
@@ -39,13 +40,14 @@ class UserController extends Controller
     public function save(Request $request)
     {
         $request->validate([
-            'name' => 'required',
-            'typedoc' => 'required',
-            'document' => 'required',
-            'nameem' => 'required',
-            'numem' => 'required',
+            'name' =>       'required',
+            'document' =>   'required',
+            'typedoc' =>    'required',            
+            'nameem' =>     'required',
+            'numem' =>      'required'
         ]);
-        User::create($request->only(['name', 'typedoc', 'document', 'nameem', 'numem']));
+        //dd($request->all());
+        User::create($request->only(['name','document','typedoc','nameem','numem']));
 
         return back();
     }

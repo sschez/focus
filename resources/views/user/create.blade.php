@@ -188,52 +188,52 @@
             <div class="card-body p-0">
                 <!-- Nested Row within Card Body -->
                 <div class="row">
-                    <div class="col-lg-6 d-none d-lg-block bg-register-image"></div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-4 mx-3 d-none d-lg-block bg-register-image"></div>
+                    <div class="col-lg-7">
                         <div class="p-5">
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Crear Paciente</h1>
                             </div>
                             @if($errors->any())
-                                    <ul id="errors" class="alert alert-danger list-unstyled">
-                                    @foreach($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                    @endforeach
-                                    </ul>
-                                    @endif
+                            <ul id="errors" class="alert alert-danger list-unstyled">
+                            @foreach($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                            @endforeach
+                            </ul>
+                            @endif
 
-                                    <form method="POST" action="{{ route('user.save') }}">
-                                    @csrf
+                            <form method="POST" action="{{ route('user.save') }}">
+                            @csrf
                             <form class="user">
+                              <div class="form-group row">
+                                 <div class="col-sm-12 mb-3 mb-sm-0">
+                                      <input type="text" class="form-control form-control-user" placeholder="Nombre Completo" name="name" value="{{ old('name') }}" />
+                                     </div>                                    
+                                 </div>
                                 <div class="form-group row">
-                                    <div class="col-sm-12 mb-3 mb-sm-0">
-                                    <input type="text" class="form-control form-control-user" placeholder="Nombre Completo" name="name" value="{{ old('name') }}" />
-                                    </div>                                    
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-1">
-                                        <input type="text" class="form-control form-control-user" placeholder="Numero Identificacion" name="document" value="{{ old('document') }}" />
+                                  <div class="col-sm-6 mb-3 mb-sm-1">
+                                     <input type="text" class="form-control form-control-user" placeholder="Numero Identificacion" name="document" value="{{ old('document') }}" />
                                     </div>
-                                    <div class="col-sm-4 mb-3 mb-sm-0 my-2">
-                                        <select name ="typedoc">
-                                            <option selected = "" disabled=""> Tipo de Documento </option>
-                                            <option value="cc"> Cédula de Ciudadania </option>
-                                            <option value="ce"> Cédula de Extranjero </option>
-                                            <option value="ti"> Tarejta de Identidad </option>
-                                        </select> 
+                                <div class="col-sm-4 mb-3 mb-sm-0 my-2" >
+                                            <select name ="typedoc">
+                                                            <option selected = "" disabled=""> Tipo de Documento </option>
+                                                            <option value= "cc" > Cédula de Ciudadania </option>
+                                                            <option value= "ce" > Cédula de Extranjero </option>
+                                                            <option value= "ti" > Tarejta de Identidad </option>
+                                            </select> 
                                     </div>
                                 </div>                                
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-1">
-                                    <input type="text" class="form-control form-control-user" placeholder="Nombre Emergencia" name="nameem" value="{{ old('nameem') }}" />
+                                        <input type="text" class="form-control form-control-user" placeholder="Nombre Emergencia" name="nameem" value="{{ old('nameem') }}" />
                                     </div>
                                     <div class="col-sm-6">
-                                    <input type="text" class="form-control form-control-user" placeholder="Contacto Emergencia" name="numem" value="{{ old('c.emergencia') }}" />                                        
+                                         <input type="text" class="form-control form-control-user" placeholder="Contacto Emergencia" name="numem" value="{{ old('c.emergencia') }}" />                                        
                                     </div>
                                 </div>
                                 <input type="submit" class="btn btn-primary btn-user btn-block" value="Crear Paciente" />
-                                
-                             </form>
+                            </form>       
+                            </form>
                 
                 <!-- /.container-fluid -->
 
