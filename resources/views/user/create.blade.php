@@ -9,8 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Crear Paciente</title>
-
+    <title>Focus</title>
     <!-- Custom fonts for this template-->
     <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
     <link
@@ -26,7 +25,7 @@
 
     <!-- Page Wrapper -->
     <div id="wrapper">
-
+    
         <!-- Sidebar -->
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
@@ -35,92 +34,67 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Focus <sub>IN</sub></div>
+                
+                <div class="text-center">
+                        <img class="img-fluid" style="width: 26rem;position:relative; top:50px; left:0px"
+                                src="{{ asset ('images/logofocus.png')}}" alt="...">
+                    </div>                            
             </a>
-
+                    <p>
+                    <p>
+                    <p>
+                    <p>
+                    <p>
+                    <p>
+                    <p>
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
-
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item">
-                <a class="nav-link">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Menu</span></a>
-            </li>
-
+            
             <!-- Divider -->
             <hr class="sidebar-divider">
-
+           
             <!-- Heading -->
-            <div class="sidebar-heading">
+            <div class="sidebar-heading mx-5 my-1">
                 Pacientes
             </div>
-
+            <p>
             <!-- Nav Item - Pages Collapse Menu -->
+
             <li class="nav-item active">
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="{{ route('user.create') }}" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="false" aria-controls="collapseTwo">
+                <a type="button" class="btn btn-outline-light mx-4" href="{{ route('user.create') }}">
                     <span>Crear Pacientes</span>
                 </a>
                 <p>
             </li>
-            </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
-            <a class="nav-link collapsed" href="{{ route('user.index') }}" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="false" >
+            <li class="nav-item active">
+            <a type="button" class="btn btn-outline-light mx-4" href="{{ route('user.index') }}">
                     <span>Ver Pacientes</span>
                 </a>
             </li>
-
+            <p>
             <!-- Divider -->
             <hr class="sidebar-divider">
 
             <!-- Heading -->
-            <div class="sidebar-heading">
-                Addons
+            <div class="sidebar-heading mx-5 my-3">
+                Terapias
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Pages</span>
+            <li class="nav-item active">
+            <a type="button" class="btn btn-outline-light mx-4" href="{{ route('user.index') }}">
+                    <span>Crear Terapias</span>
                 </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="login.html">Login</a>
-                        <a class="collapse-item" href="register.html">Register</a>
-                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
-                        <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item" href="blank.html">Blank Page</a>
-                    </div>
-                </div>
             </li>
 
             <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="charts.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
-            </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
-
+            <li class="nav-item active">
+            <a type="button" class="btn btn-outline-light mx-4 my-3" href="{{ route('user.index') }}">
+                    <span>Ver Terapias</span>
+                </a>
+            </li>        
 
         </ul>
         <!-- End of Sidebar -->
@@ -153,7 +127,7 @@
                                 <img class="img-profile rounded-circle"
                                     src="{{ asset('images/undraw_profile.svg') }}">
                             </a>
-
+                    
                     </ul>
 
                 </nav>

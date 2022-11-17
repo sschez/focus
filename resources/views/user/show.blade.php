@@ -9,8 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Crear Paciente</title>
-
+    <title>Focus</title>
     <!-- Custom fonts for this template-->
     <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
     <link
@@ -26,101 +25,77 @@
 
     <!-- Page Wrapper -->
     <div id="wrapper">
-
+    
+        <!-- Sidebar -->
         <!-- Sidebar -->
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('home.index') }}">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Focus <sub>IN</sub></div>
+                
+                <div class="text-center">
+                        <img class="img-fluid" style="width: 26rem;position:relative; top:50px; left:0px"
+                                src="{{ asset ('images/logofocus.png')}}" alt="...">
+                    </div>                            
             </a>
-
+                    <p>
+                    <p>
+                    <p>
+                    <p>
+                    <p>
+                    <p>
+                    <p>
+            <!-- Divider -->
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
-
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item">
-                <a class="nav-link">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Menu</span></a>
-            </li>
-
+            
             <!-- Divider -->
             <hr class="sidebar-divider">
-
+           
             <!-- Heading -->
-            <div class="sidebar-heading">
+            <div class="sidebar-heading mx-5 my-1">
                 Pacientes
             </div>
-
+            <p>
             <!-- Nav Item - Pages Collapse Menu -->
+
             <li class="nav-item active">
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="{{ route('user.create') }}" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="false" aria-controls="collapseTwo">
+                <a type="button" class="btn btn-outline-light mx-4" href="{{ route('user.create') }}">
                     <span>Crear Pacientes</span>
                 </a>
                 <p>
             </li>
-            </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
-            <a class="nav-link collapsed" href="{{ route('user.index') }}" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="false" >
+            <li class="nav-item active">
+            <a type="button" class="btn btn-outline-light mx-4" href="{{ route('user.index') }}">
                     <span>Ver Pacientes</span>
                 </a>
             </li>
-
+            <p>
             <!-- Divider -->
             <hr class="sidebar-divider">
 
             <!-- Heading -->
-            <div class="sidebar-heading">
-                Addons
+            <div class="sidebar-heading mx-5 my-3">
+                Terapias
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Pages</span>
+            <li class="nav-item active">
+            <a type="button" class="btn btn-outline-light mx-4" href="{{ route('user.index') }}">
+                    <span>Crear Terapias</span>
                 </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="login.html">Login</a>
-                        <a class="collapse-item" href="register.html">Register</a>
-                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
-                        <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item" href="blank.html">Blank Page</a>
-                    </div>
-                </div>
             </li>
 
             <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="charts.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
-            </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
-
+            <li class="nav-item active">
+            <a type="button" class="btn btn-outline-light mx-4 my-3" href="{{ route('user.index') }}">
+                    <span>Ver Terapias</span>
+                </a>
+            </li>        
 
         </ul>
         <!-- End of Sidebar -->
@@ -140,11 +115,8 @@
                     </button>
 
                     <!-- Topbar Navbar -->
-                    <ul class="navbar-nav ml-auto">               
-                      
-
+                    <ul class="navbar-nav ml-auto">      
                         <div class="topbar-divider d-none d-sm-block"></div>
-
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
@@ -153,43 +125,20 @@
                                 <img class="img-profile rounded-circle"
                                     src="{{ asset('images/undraw_profile.svg') }}">
                             </a>
-                            <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
-                                </a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
-                                </a>
-                            </div>
                         </li>
-
                     </ul>
-
                 </nav>
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-                <div class="container">
-
-      
+                <center>
+                <div class="container">     
            
                 <!-- Nested Row within Card Body -->
                 <div class="card" style="width: 20rem">
+                
                   <img class="card-img-top" src="{{ asset ('images/usuario.png') }}" alt="Card image cap">
-                  <div class="card-body"style="text-transform:uppercase;">
+                  <div class="card-body" style="text-transform:uppercase; ">
                     <h5 class="card-title"><b>{{ $viewData["user"]["name"] }}</b></h5>
                   </div>
                   <ul class="list-group list-group-flush">
@@ -208,10 +157,20 @@
                     <a href="#" class="card-link">Ver sesiones</a>
                     <a href="#" class="card-link">Another link</a>
                   </div>
-                </div>              
+                </div>                           
               </div>
+              </center> 
             </div>
-         </div>
+           
+            <footer class="sticky-footer bg-white">
+                    <div class="text-center">
+                        <img class="img-fluid" style="width: 20rem;"
+                                src="{{ asset ('images/logofocus.png')}}" alt="...">
+                    </div>
+                    </div>
+                </footer>
+            </div>
+          </div>
     <!-- End of Page Wrapper -->
 
     <!-- Bootstrap core JavaScript-->

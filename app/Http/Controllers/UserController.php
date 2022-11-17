@@ -18,6 +18,17 @@ class UserController extends Controller
         return view('user.index')->with('viewData', $viewData);
     }
 
+    public function search(Request $request)
+    {
+        $search = $request->input('search');
+        $viewData = [];
+        $viewData['title'] = 'Usuarios';
+        $viewData['users'] = User::where('name', 'LIKE', '%' . $search . '%')
+            ->orWhere('document', 'LIKE', '%' . $search . '%')->get();
+        $viewData['search'] = $search;
+        return view('user.index')->with("viewData", $viewData);
+    }
+
     public function show($id)
     {
         $viewData = [];
