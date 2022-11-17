@@ -4013,6 +4013,7 @@ input[type="button"].btn-block {
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
+  text-align: center;
 }
 
 .nav-link:hover, .nav-link:focus {
@@ -4051,6 +4052,7 @@ input[type="button"].btn-block {
   color: #6e707e;
   background-color: #fff;
   border-color: #dddfeb #dddfeb #fff;
+  
 }
 
 .nav-tabs .dropdown-menu {
@@ -9546,6 +9548,7 @@ button.bg-dark:focus {
 
 .text-uppercase, .dropdown .dropdown-menu .dropdown-header, .sidebar .sidebar-heading {
   text-transform: uppercase !important;
+  text-align: center;
 }
 
 .text-capitalize {
@@ -10856,7 +10859,7 @@ a:focus {
 }
 
 .bg-register-image {
-  background: url("https://source.unsplash.com/Mv9hjnEUHR4/600x800");
+  background: url("/public/images/logofocus.png");
   background-position: center;
   background-size: cover;
 }

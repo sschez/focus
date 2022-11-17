@@ -35,7 +35,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Focus<sup>IN</sup></div>
+                <div class="sidebar-brand-text mx-3">Focus <sub>IN</sub></div>
             </a>
 
             <!-- Divider -->
@@ -43,7 +43,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Menu</span></a>
             </li>
@@ -69,7 +69,7 @@
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
-            <a class="nav-link collapsed" href="{{ route('user.create') }}" data-toggle="collapse" data-target="#collapseTwo"
+            <a class="nav-link collapsed" href="{{ route('user.index') }}" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="false" >
                     <span>Ver Pacientes</span>
                 </a>
@@ -182,174 +182,61 @@
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid">
+                <div class="container">
 
-                    <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Crear Paciente</h1>
-
-                    <div class="row">
-
-                        <div class="col-lg-6">
-
-                            <!-- Circle Buttons -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Informacion Personal</h6>
-                                </div>
-                                <div class="card-body">                                    
-                                @if($errors->any())
-                                    <ul id="errors" class="alert alert-danger list-unstyled">
-                                    @foreach($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                    @endforeach
-                                    </ul>
-                                    @endif
-
-                                    <form method="POST" action="{{ route('user.save') }}">
-                                    @csrf
-                                    <input type="text" class="form-control mb-2" placeholder="Nombre completo" name="name" value="{{ old('name') }}" />    
-                                              
-                                    <label for ="typedoc"> Tipo de documento: </label>
-                                    <select name ="typedoc">
-                                        <option disabled=""> Selecciona una opción </option>
-                                        <option value="cc"> Cédula de Ciudadania </option>
-                                        <option value="ce"> Cédula de Extranjero </option>
-                                        <option value="ti"> Tarejta de Identidad </option>
-                                    </select>
-
-                                    <input type="text" class="form-control mb-2" placeholder="Numero de documento de identidad" name="document" value="{{ old('document') }}" />
-                                   
-                                    <label for ="namedoc"> Nombre del doctor: </label>
-                                    <select name ="namedoc">
-                                        <option disabled=""> Selecciona una opción </option>
-                                        <option value="dd"> Doctor Diego Bustamante</option>
-                                        <option value="da"> Doctor Andres Rincon</option>
-                                        <option value="dj"> Doctor Jorge Zapata</option>
-                                    </select>
-
-                                    <input type="text" class="form-control mb-2" placeholder="Nombre de Contacto Emergencia" name="nameem" value="{{ old('nameem') }}" />
-
-                                    <input type="text" class="form-control mb-2" placeholder="Contacto de Emergencia" name="numem" value="{{ old('c.emergencia') }}" />
-                                    
-                                    <input type="submit" class="crear-paciente-b" value="Crear Paciente" />
-                                    </form>
-                                </div>
+      
+           
+                <!-- Nested Row within Card Body -->
+                <div class="row">
+                    <div class="col-lg-4 mx-3 d-none d-lg-block bg-register-image"></div>
+                    <div class="col-lg-7">
+                        <div class="p-5">
+                            <div class="text-center">
+                                <h1 class="h4 text-gray-900 mb-4">Crear Paciente</h1>
                             </div>
+                            @if($errors->any())
+                            <ul id="errors" class="alert alert-danger list-unstyled">
+                            @foreach($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                            @endforeach
+                            </ul>
+                            @endif
 
-                            <!-- Brand Buttons -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Brand Buttons</h6>
+                            <form method="POST" action="{{ route('user.save') }}">
+                            @csrf
+                            <form class="user">
+                              <div class="form-group row">
+                                 <div class="col-sm-12 mb-3 mb-sm-0">
+                                      <input type="text" class="form-control form-control-user" placeholder="Nombre Completo" name="name" value="{{ old('name') }}" />
+                                     </div>                                    
+                                 </div>
+                                <div class="form-group row">
+                                  <div class="col-sm-6 mb-3 mb-sm-1">
+                                     <input type="text" class="form-control form-control-user" placeholder="Numero Identificacion" name="document" value="{{ old('document') }}" />
+                                    </div>
+                                <div class="col-sm-4 mb-3 mb-sm-0 my-2" >
+                                            <select name ="typedoc">
+                                                            <option selected = "" disabled=""> Tipo de Documento </option>
+                                                            <option value= "cc" > Cédula de Ciudadania </option>
+                                                            <option value= "ce" > Cédula de Extranjero </option>
+                                                            <option value= "ti" > Tarejta de Identidad </option>
+                                            </select> 
+                                    </div>
+                                </div>                                
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control form-control-user" placeholder="Nombre Emergencia" name="nameem" value="{{ old('nameem') }}" />
+                                    </div>
+                                    <div class="col-sm-6">
+                                         <input type="text" class="form-control form-control-user" placeholder="Contacto Emergencia" name="numem" value="{{ old('numem') }}" />                                        
+                                    </div>
                                 </div>
-                                <div class="card-body">
-                                    <p>Google and Facebook buttons are available featuring each company's respective
-                                        brand color. They are used on the user login and registration pages.</p>
-                                    <p>You can create more custom buttons by adding a new color variable in the
-                                        <code>_variables.scss</code> file and then using the Bootstrap button variant
-                                        mixin to create a new style, as demonstrated in the <code>_buttons.scss</code>
-                                        file.</p>
-                                    <a href="#" class="btn btn-google btn-block"><i class="fab fa-google fa-fw"></i>
-                                        .btn-google</a>
-                                    <a href="#" class="btn btn-facebook btn-block"><i
-                                            class="fab fa-facebook-f fa-fw"></i> .btn-facebook</a>
-
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="col-lg-6">
-
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Split Buttons with Icon</h6>
-                                </div>
-                                <div class="card-body">
-                                    <p>Works with any button colors, just use the <code>.btn-icon-split</code> class and
-                                        the markup in the examples below. The examples below also use the
-                                        <code>.text-white-50</code> helper class on the icons for additional styling,
-                                        but it is not required.</p>
-                                    <a href="#" class="btn btn-primary btn-icon-split">
-                                        <span class="icon text-white-50">
-                                            <i class="fas fa-flag"></i>
-                                        </span>
-                                        <span class="text">Split Button Primary</span>
-                                    </a>
-                                    <div class="my-2"></div>
-                                    <a href="#" class="btn btn-success btn-icon-split">
-                                        <span class="icon text-white-50">
-                                            <i class="fas fa-check"></i>
-                                        </span>
-                                        <span class="text">Split Button Success</span>
-                                    </a>
-                                    <div class="my-2"></div>
-                                    <a href="#" class="btn btn-info btn-icon-split">
-                                        <span class="icon text-white-50">
-                                            <i class="fas fa-info-circle"></i>
-                                        </span>
-                                        <span class="text">Split Button Info</span>
-                                    </a>
-                                    <div class="my-2"></div>
-                                    <a href="#" class="btn btn-warning btn-icon-split">
-                                        <span class="icon text-white-50">
-                                            <i class="fas fa-exclamation-triangle"></i>
-                                        </span>
-                                        <span class="text">Split Button Warning</span>
-                                    </a>
-                                    <div class="my-2"></div>
-                                    <a href="#" class="btn btn-danger btn-icon-split">
-                                        <span class="icon text-white-50">
-                                            <i class="fas fa-trash"></i>
-                                        </span>
-                                        <span class="text">Split Button Danger</span>
-                                    </a>
-                                    <div class="my-2"></div>
-                                    <a href="#" class="btn btn-secondary btn-icon-split">
-                                        <span class="icon text-white-50">
-                                            <i class="fas fa-arrow-right"></i>
-                                        </span>
-                                        <span class="text">Split Button Secondary</span>
-                                    </a>
-                                    <div class="my-2"></div>
-                                    <a href="#" class="btn btn-light btn-icon-split">
-                                        <span class="icon text-gray-600">
-                                            <i class="fas fa-arrow-right"></i>
-                                        </span>
-                                        <span class="text">Split Button Light</span>
-                                    </a>
-                                    <div class="mb-4"></div>
-                                    <p>Also works with small and large button classes!</p>
-                                    <a href="#" class="btn btn-primary btn-icon-split btn-sm">
-                                        <span class="icon text-white-50">
-                                            <i class="fas fa-flag"></i>
-                                        </span>
-                                        <span class="text">Split Button Small</span>
-                                    </a>
-                                    <div class="my-2"></div>
-                                    <a href="#" class="btn btn-primary btn-icon-split btn-lg">
-                                        <span class="icon text-white-50">
-                                            <i class="fas fa-flag"></i>
-                                        </span>
-                                        <span class="text">Split Button Large</span>
-                                    </a>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-
+                                <input type="submit" class="btn btn-primary btn-user btn-block" value="Crear Paciente" />
+                            </form>       
+                            </form>                 
                 </div>
-                <!-- /.container-fluid -->
-
             </div>
-            <!-- End of Main Content -->
-
-
-        </div>
-        <!-- End of Content Wrapper -->
-
-    </div>
+         </div>
     <!-- End of Page Wrapper -->
 
     <!-- Scroll to Top Button-->

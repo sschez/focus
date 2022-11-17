@@ -43,7 +43,7 @@ class Sesion extends Model
     {
         return $this->attributes['numSesion'];
     }
-    
+
     public function setNumSesion($numSesion)
     {
         $this->attributes['numSesion'] = $numSesion;
@@ -53,7 +53,7 @@ class Sesion extends Model
     {
         return $this->attributes['repRealizadas'];
     }
-    
+
     public function setRepRealizadas($repRealizadas)
     {
         $this->attributes['repRealizadas'] = $repRealizadas;
@@ -63,7 +63,7 @@ class Sesion extends Model
     {
         return $this->attributes['extensionMax'];
     }
-    
+
     public function setExtensionMax($extensionMax)
     {
         $this->attributes['extensionMax'] = $extensionMax;
@@ -73,7 +73,7 @@ class Sesion extends Model
     {
         return $this->attributes['rangos'];
     }
-    
+
     public function setRangos($rangos)
     {
         $this->attributes['rangos'] = $rangos;
@@ -83,7 +83,7 @@ class Sesion extends Model
     {
         return $this->attributes['fechaCita'];
     }
-    
+
     public function setFechaCita($fechaCita)
     {
         $this->attributes['fechaCita'] = $fechaCita;
@@ -103,6 +103,7 @@ class Sesion extends Model
     {
         return $this->attributes['updated_at'];
     }
+
 //----------------------------------------------------
     public function terapia()
     {

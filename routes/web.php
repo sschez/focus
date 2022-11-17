@@ -13,11 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'App\Http\Controllers\HomeController@index')->name("home.index");
-Route::get('/user', 'App\Http\Controllers\UserController@index')->name("user.index");
+Route::get('/', 'App\Http\Controllers\HomeController@index')->name('home.index');
+Route::get('/user', 'App\Http\Controllers\UserController@index')->name('user.index');
 Route::get('/user/create', 'App\Http\Controllers\UserController@create')
-->name("user.create");
+->name('user.create');
 Route::post('/user/save', 'App\Http\Controllers\UserController@save')
-->name("user.save");
-Route::get('/user/{id}', 'App\Http\Controllers\UserController@show')->name("user.show");
-
+->name('user.save');
+Route::get('/user/{id}', 'App\Http\Controllers\UserController@show')->name('user.show');

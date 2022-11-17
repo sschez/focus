@@ -23,4 +23,3 @@ class DatabaseSeeder extends Seeder
         Sesion::factory(5)->create();
     }
 }
-

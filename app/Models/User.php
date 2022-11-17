@@ -4,25 +4,35 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Request;
 
 class User extends Model
 {
-    use HasFactory;
 
     /**
      * PRODUCT ATTRIBUTES
      * $this->attributes['id'] - int - contains the product primary key (id)
      * $this->attributes['name'] - string - contains the user name
-     * $this->attributes['typedoc'] - string - 
-     * $this->attributes['document'] - int - 
+     * $this->attributes['typedoc'] - string - ccontains the type od document
+     * $this->attributes['document'] - int - contains the user document
      * $this->attributes['namedoc'] - string - 
-     * $this->attributes['namem'] - string - 
-     * $this->attributes['numem'] - int - 
-     * $this->attributes['created_at'] - timestamp- 
-     * $this->attributes['updated_at'] - timestamp - 
-    */
+     * $this->attributes['namem'] - string - contains the emergency name
+     * $this->attributes['numem'] - int - contains the emerency number
+     */
+    protected $fillable = ['name', 'typedoc', 'document', 'nameem', 'numem'];
 
-    protected $fillable = ['name','typedoc','document','namedoc','namem','numem'];
+    public static function validate(Request $request)
+    {
+        $rules= [
+            "name" =>       "required",
+            "document" =>   "required",
+            "typedoc" =>    "required",            
+            "nameem" =>     "required",
+            "numem" =>      "required"
+        ];
+
+        $request->validate($rules);
+    }
 
     public function getId()
     {
@@ -64,15 +74,6 @@ class User extends Model
         $this->attributes['document'] = $document;
     }
 
-    public function getNamedoc()
-    {
-        return $this->attributes['namedoc'];
-    }
-
-    public function setNamedoc($namedoc)
-    {
-        $this->attributes['namedoc'] = $namedoc;
-    }
 
     public function getNameem()
     {
@@ -94,4 +95,18 @@ class User extends Model
         $this->attributes['numem'] = $numem;
     }
 
+    public function Therapy()
+    {
+        return $this->hasMany(Therapy::class);
+    }
+
+    public function getTherapy()
+    {
+        return $this->therapy;
+    }
+
+    public function setTherapy($therapy)
+    {
+        $this->therapy = $therapy;
+    }
 }
