@@ -39,15 +39,9 @@ class UserController extends Controller
 
     public function save(Request $request)
     {
-        $request->validate([
-            'name' =>       'required',
-            'document' =>   'required',
-            'typedoc' =>    'required',            
-            'nameem' =>     'required',
-            'numem' =>      'required'
-        ]);
+        User::validate($request);
         //dd($request->all());
-        User::create($request->only(['name','document','typedoc','nameem','numem']));
+        User::create($request->only(["name","document","typedoc","nameem","numem"]));
 
         return back();
     }

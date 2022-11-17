@@ -184,8 +184,8 @@
                 <!-- Begin Page Content -->
                 <div class="container">
 
-        <div class="card o-hidden border-0 shadow-lg my-5">
-            <div class="card-body p-0">
+      
+           
                 <!-- Nested Row within Card Body -->
                 <div class="row">
                     <div class="col-lg-4 mx-3 d-none d-lg-block bg-register-image"></div>
@@ -224,27 +224,19 @@
                                     </div>
                                 </div>                                
                                 <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-1">
+                                    <div class="col-sm-6">
                                         <input type="text" class="form-control form-control-user" placeholder="Nombre Emergencia" name="nameem" value="{{ old('nameem') }}" />
                                     </div>
                                     <div class="col-sm-6">
-                                         <input type="text" class="form-control form-control-user" placeholder="Contacto Emergencia" name="numem" value="{{ old('c.emergencia') }}" />                                        
+                                         <input type="text" class="form-control form-control-user" placeholder="Contacto Emergencia" name="numem" value="{{ old('numem') }}" />                                        
                                     </div>
                                 </div>
                                 <input type="submit" class="btn btn-primary btn-user btn-block" value="Crear Paciente" />
                             </form>       
-                            </form>
-                
-                <!-- /.container-fluid -->
-
+                            </form>                 
+                </div>
             </div>
-            <!-- End of Main Content -->
-
-
-        </div>
-        <!-- End of Content Wrapper -->
-
-    </div>
+         </div>
     <!-- End of Page Wrapper -->
 
     <!-- Scroll to Top Button-->

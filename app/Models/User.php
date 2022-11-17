@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Request;
 
 class User extends Model
 {
@@ -18,7 +19,20 @@ class User extends Model
      * $this->attributes['namem'] - string - contains the emergency name
      * $this->attributes['numem'] - int - contains the emerency number
      */
-    protected $fillable = ['name', 'typedoc', 'document', 'namem', 'numem'];
+    protected $fillable = ['name', 'typedoc', 'document', 'nameem', 'numem'];
+
+    public static function validate(Request $request)
+    {
+        $rules= [
+            "name" =>       "required",
+            "document" =>   "required",
+            "typedoc" =>    "required",            
+            "nameem" =>     "required",
+            "numem" =>      "required"
+        ];
+
+        $request->validate($rules);
+    }
 
     public function getId()
     {
