@@ -43,7 +43,7 @@ class UserController extends Controller
             'typedoc' => 'required',
             'document' => 'required',
             'nameem' => 'required',
-            'numem' => 'required'
+            'numem' => 'required',
         ]);
         User::create($request->only(['name', 'typedoc', 'document', 'nameem', 'numem']));
 
