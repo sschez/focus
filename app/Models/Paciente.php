@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Terapia;
 
 class Paciente extends Model
 {
@@ -44,17 +43,17 @@ class Paciente extends Model
     {
         return $this->attributes['numeroID'];
     }
-    
+
     public function setNumeroID($numeroID)
     {
         $this->attributes['numeroID'] = $numeroID;
     }
-    
+
     public function getNumEmergencia()
     {
         return $this->attributes['numEmergencia'];
     }
-    
+
     public function setNumEmergencia($numEmergencia)
     {
         $this->attributes['numEmergencia'] = $numEmergencia;
@@ -64,7 +63,7 @@ class Paciente extends Model
     {
         return $this->attributes['nombreEmergencia'];
     }
-    
+
     public function setNombreEmergencia($nombreEmergencia)
     {
         $this->attributes['nombreEmergencia'] = $nombreEmergencia;

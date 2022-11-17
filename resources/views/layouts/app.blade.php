@@ -40,85 +40,52 @@
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
-
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" >
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Menu</span></a>
-            </li>
-
+            
             <!-- Divider -->
             <hr class="sidebar-divider">
            
             <!-- Heading -->
-            <div class="sidebar-heading">
+            <div class="sidebar-heading mx-5 my-1">
                 Pacientes
             </div>
-
+            <p>
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="{{ route('user.create') }}" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="false" >
+
+            <li class="nav-item active">
+                <a type="button" class="btn btn-outline-light mx-4" href="{{ route('user.create') }}">
                     <span>Crear Pacientes</span>
                 </a>
                 <p>
             </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
-            <a class="nav-link collapsed" href="{{ route('user.create') }}" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="false" >
+            <li class="nav-item active">
+            <a type="button" class="btn btn-outline-light mx-4" href="{{ route('user.index') }}">
                     <span>Ver Pacientes</span>
                 </a>
             </li>
-
+            <p>
             <!-- Divider -->
             <hr class="sidebar-divider">
 
             <!-- Heading -->
-            <div class="sidebar-heading">
-                Addons
+            <div class="sidebar-heading mx-5 my-3">
+                Terapias
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Pages</span>
+            <li class="nav-item active">
+            <a type="button" class="btn btn-outline-light mx-4" href="{{ route('user.index') }}">
+                    <span>Crear Terapias</span>
                 </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="login.html">Login</a>
-                        <a class="collapse-item" href="register.html">Register</a>
-                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
-                        <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item" href="blank.html">Blank Page</a>
-                    </div>
-                </div>
             </li>
 
             <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="charts.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
-            </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
-            
+            <li class="nav-item active">
+            <a type="button" class="btn btn-outline-light mx-4 my-3" href="{{ route('user.index') }}">
+                    <span>Ver Terapias</span>
+                </a>
+            </li>        
 
         </ul>
         <!-- End of Sidebar -->
@@ -141,7 +108,7 @@
                         <!-- Nav Item - Search Dropdown (Visible Only XS) -->
                         <li class="nav-item dropdown no-arrow d-sm-none">
                             <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                data-toggle="dropdown" aria-haspopup="true" >
                                 <i class="fas fa-search fa-fw"></i>
                             </a>
                             <!-- Dropdown - Messages -->
@@ -167,7 +134,7 @@
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                data-toggle="dropdown" aria-haspopup="true" >
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Alejandro</span>
                                 <img class="img-profile rounded-circle" src="{{ asset('images/undraw_profile.svg') }}">
                             </a>
@@ -289,7 +256,7 @@
                                     <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
                                     <div class="dropdown no-arrow">
                                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            data-toggle="dropdown" aria-haspopup="true" >
                                             <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
@@ -320,7 +287,7 @@
                                     <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
                                     <div class="dropdown no-arrow">
                                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            data-toggle="dropdown" aria-haspopup="true" >
                                             <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
@@ -545,21 +512,21 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="{{ asset('vendor/jquery-easing/jquery.easing.min.js') }}"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
+    <script src="{{ asset('public/js/sb-admin-2.min.js') }}"></script>
 
     <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="{{ asset('vendor/chart.js/Chart.min.js') }}"></script>
 
     <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
+    <script src="{{ asset('public/js/demo/chart-area-demo.js') }}"></script>
+    <script src="{{ asset('public/js/demo/chart-pie-demo.js') }}"></script>
 
 </body>
 

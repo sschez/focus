@@ -13,16 +13,15 @@ class User extends Model
      * PRODUCT ATTRIBUTES
      * $this->attributes['id'] - int - contains the product primary key (id)
      * $this->attributes['name'] - string - contains the user name
-     * $this->attributes['typedoc'] - string - 
-     * $this->attributes['document'] - int - 
-     * $this->attributes['namedoc'] - string - 
-     * $this->attributes['namem'] - string - 
-     * $this->attributes['numem'] - int - 
-     * $this->attributes['created_at'] - timestamp- 
-     * $this->attributes['updated_at'] - timestamp - 
-    */
-
-    protected $fillable = ['name','typedoc','document','namedoc','namem','numem'];
+     * $this->attributes['typedoc'] - string -
+     * $this->attributes['document'] - int -
+     * $this->attributes['namedoc'] - string -
+     * $this->attributes['namem'] - string -
+     * $this->attributes['numem'] - int -
+     * $this->attributes['created_at'] - timestamp-
+     * $this->attributes['updated_at'] - timestamp -
+     */
+    protected $fillable = ['name', 'typedoc', 'document', 'namedoc', 'namem', 'numem'];
 
     public function getId()
     {
@@ -93,5 +92,4 @@ class User extends Model
     {
         $this->attributes['numem'] = $numem;
     }
-
 }

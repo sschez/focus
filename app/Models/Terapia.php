@@ -4,9 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Paciente;
-use App\Models\Sesion;
-use App\Models\User;
+
 
 class Terapia extends Model
 {
@@ -46,7 +44,7 @@ class Terapia extends Model
     {
         return $this->attributes['ejercicio'];
     }
-    
+
     public function setEjercicio($ejercicio)
     {
         $this->attributes['ejercicio'] = $ejercicio;
