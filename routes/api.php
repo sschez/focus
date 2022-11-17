@@ -18,4 +18,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/paciente', 'App\Http\Controllers\Api\PacienteApi@view')->name("api.paciente.view");
+Route::post('/userID', 'App\Http\Controllers\Api\UserApi@view')->name("api.user.view");

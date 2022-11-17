@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('sesiones', function (Blueprint $table) {
+        Schema::create('sesions', function (Blueprint $table) {
             $table->id();
             $table->integer('dolor');
             $table->integer('caida');
