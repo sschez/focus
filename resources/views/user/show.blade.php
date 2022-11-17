@@ -189,19 +189,23 @@
                 <!-- Nested Row within Card Body -->
                 <div class="card" style="width: 20rem">
                   <img class="card-img-top" src="{{ asset ('images/usuario.png') }}" alt="Card image cap">
-                  <div class="card-body">
-                    <h5 class="card-title">{{ $viewData["user"]["name"] }}</h5>
+                  <div class="card-body"style="text-transform:uppercase;">
+                    <h5 class="card-title"><b>{{ $viewData["user"]["name"] }}</b></h5>
                   </div>
                   <ul class="list-group list-group-flush">
 
-                    <li class="list-group-item">Tipo de documento: {{ $viewData["user"]["typedoc"] }}</li>
-                    <li class="list-group-item">Documento: {{ $viewData["user"]["document"] }}</li>
-                    <li class="list-group-item">Contacto de Emergencia: {{ $viewData["user"]["nameem"] }}</li>
-                    <li class="list-group-item">Numero de Emergencia: {{ $viewData["user"]["numem"] }}</li>
+                    <li class="list-group-item" style="text-transform:uppercase;">
+                    <b>Tipo de documento:</b> {{ $viewData["user"]["typedoc"] }}</li>
+                    <li class="list-group-item" style="text-transform:uppercase;">
+                      <b>Documento:</b> {{ $viewData["user"]["document"] }}</li>
+                    <li class="list-group-item" style="text-transform:uppercase;">
+                      <b>Contacto de Emergencia:</b> {{ $viewData["user"]["nameem"] }}</li>
+                    <li class="list-group-item" style="text-transform:uppercase;">
+                      <b>Numero de Emergencia:</b> {{ $viewData["user"]["numem"] }}</li>
 
                   </ul>
                   <div class="card-body">
-                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Ver sesiones</a>
                     <a href="#" class="card-link">Another link</a>
                   </div>
                 </div>              
