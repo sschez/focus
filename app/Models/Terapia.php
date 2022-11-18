@@ -4,12 +4,25 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
+use Illuminate\Http\Request;
 
 class Terapia extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['doctor', 'condicionMedica', 'numSesiones', 'ejercicio', 'user_id'];
+    public static function validate(Request $request)
+    {
+        $rules= [
+            "doctor" =>       "required",
+            "condicionMedica" =>   "required",
+            "numSesiones" =>    "required",            
+            "ejercicio" =>     "required",
+            "user_id" =>      "required"
+        ];
+
+        $request->validate($rules);
+    }
     public function getId()
     {
         return $this->attributes['id'];

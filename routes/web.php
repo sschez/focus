@@ -20,3 +20,9 @@ Route::get('/user/create', 'App\Http\Controllers\UserController@create')->name('
 Route::post('/user/save', 'App\Http\Controllers\UserController@save')->name('user.save');
 Route::delete('/user/{id}/delete', 'App\Http\Controllers\UserController@destroy')->name("user.destroy");
 Route::get('/user/{id}', 'App\Http\Controllers\UserController@show')->name('user.show');
+Route::get('/terapia', 'App\Http\Controllers\TerapiaController@index')->name('terapia.index');
+Route::get('/terapia/search', 'App\Http\Controllers\TerapiaController@search')->name("terapia.search");;
+Route::get('/terapia/create', 'App\Http\Controllers\TerapiaController@create')->name('terapia.create');
+Route::post('/terapia/save', 'App\Http\Controllers\TerapiaController@save')->name('terapia.save');
+Route::delete('/terapia/{id}/delete', 'App\Http\Controllers\TerapiaController@destroy')->name("terapia.destroy");
+Route::get('/terapia/{id}', 'App\Http\Controllers\TerapiaController@show')->name('terapia.show');

@@ -6,16 +6,16 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Terapia;
 
-class TherapyController extends Controller
+class TerapiaController extends Controller
 {
     public function index()
     {
         $viewData = [];
         $viewData['title'] = 'Terapias';
         $viewData['subtitle'] = 'Lista de Terapias';
-        $viewData['therapys'] = Terapia::all();
+        $viewData['terapias'] = Terapia::all();
 
-        return view('therapy.index')->with('viewData', $viewData);
+        return view('terapia.index')->with('viewData', $viewData);
     }
 
     public function search(Request $request)
@@ -23,29 +23,29 @@ class TherapyController extends Controller
         $search = $request->input('search');
         $viewData = [];
         $viewData['title'] = 'Terapias';
-        $viewData['therapys'] = Terapia::where('name', 'LIKE', '%' . $search . '%')
+        $viewData['terapias'] = Terapia::where('name', 'LIKE', '%' . $search . '%')
             ->orWhere('document', 'LIKE', '%' . $search . '%')->get();
         $viewData['search'] = $search;
-        return view('therapy.index')->with("viewData", $viewData);
+        return view('terapia.index')->with("viewData", $viewData);
     }
 
     public function show($id)
     {
         $viewData = [];
-        $therapy = Terapia::findOrFail($id);
-        $viewData['title'] = 'Terapia '.$therapy['name'];
-        $viewData['subtitle'] = 'Informacion de '.$therapy['name'];
-        $viewData['therapys'] = $therapy;
+        $terapia = Terapia::findOrFail($id);
+        $viewData['title'] = 'Terapia '.$terapia['name'];
+        $viewData['subtitle'] = 'Informacion de '.$terapia['name'];
+        $viewData['terapias'] = $terapia;
 
-        return view('therapy.show')->with('viewData', $viewData);
+        return view('terapia.show')->with('viewData', $viewData);
     }
 
     public function create()
     {
         $viewData = []; //to be sent to the view
         $viewData['title'] = 'Crear Terapia';
-
-        return view('therapy.create')->with('viewData', $viewData);
+        $viewData['terapias'] = Terapia::all();
+        return view('terapia.create')->with('viewData', $viewData);
     }
 
     public function save(Request $request)
@@ -59,6 +59,7 @@ class TherapyController extends Controller
     public function destroy($id)
     {
         Terapia::destroy($id);
-        return back();
+        return redirect()->route('terapia.index')
+            ->with('¡Paciente Eliminado Correctamente!');
     }
 }

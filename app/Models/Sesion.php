@@ -104,7 +104,7 @@ class Sesion extends Model
         return $this->attributes['updated_at'];
     }
 
-//----------------------------------------------------
+    //----------------------------------------------------
     public function terapia()
     {
         return $this->belongsTo(Terapia::class);

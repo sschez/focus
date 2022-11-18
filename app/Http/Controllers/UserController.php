@@ -60,6 +60,6 @@ class UserController extends Controller
     {
         User::destroy($id);
         return redirect()->route('user.index')
-        ->with('¡Paciente Eliminado Correctamente!');
+            ->with('¡Paciente Eliminado Correctamente!');
     }
 }
