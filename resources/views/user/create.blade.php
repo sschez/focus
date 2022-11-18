@@ -190,7 +190,12 @@
             </div>
          </div>
     <!-- End of Page Wrapper -->
-
+    <footer class="sticky-footer bg-white">
+                <a class="text-center" href="{{ route('home.index') }}" style="width: 26rem;position:relative; top:0px; left:350px" >
+                        <img class="img-fluid " style="width: 15rem;"
+                                src="{{ asset ('images/logofocus.png')}}" alt="...">
+                    </a>
+                </footer>
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>

@@ -102,58 +102,24 @@
         <div id="content-wrapper" class="d-flex flex-column">
 
             <!-- Main Content -->
-            <div id="content">
-
-                <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-                    <!-- Sidebar Toggle (Topbar) -->
-                    <form class="form-inline">
-                        <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                            <i class="fa fa-bars"></i>
-                        </button>
-                    </form>
-
-                    <!-- Topbar Search -->
-
-
-
+            <div>                
                     <!-- Topbar Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                    <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">                              
+                    <ul class="navbar-nav ml-auto">                  
+                        <div class="topbar-divider d-none d-sm-block"></div>
                         <!-- Nav Item - User Information -->
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Alejandro</span>
-                                <img class="img-profile rounded-circle"
-                                    src="{{ asset('images/undraw_profile.svg') }}">
-                            </a>
-                            <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
-                                </a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
-                                </a>
-                            </div>
-                        </li>
-
+                            <a class="nav-link dropdown-toggle" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" >
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 large" style="position:relative; top:50px; right:70px">Alejandro</span>
+                                <img class="img-profile rounded-circle" style="position:relative; top:50px; right:70px" src="{{ asset('images/undraw_profile.svg') }}">
+                            </a>  
+                        </div>                          
                     </ul>
-
                 </nav>
+                <p>
+                <p>
+                <p>
+                <p>
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
@@ -217,26 +183,16 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
-                <!-- /.container-fluid -->
-            </div>
             <!-- End of Main Content -->
-
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
-                <div class="text-center">
-                    <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
-                            src="{{ asset ('images/logofocus.png')}}" alt="...">
-                </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
-
+                    <a class="text-center" href="{{ route('home.index') }}" style="width: 26rem;position:relative; top:0px; left:750px" >
+                        <img class="img-fluid " style="width: 15rem;"
+                                src="{{ asset ('images/logofocus.png')}}" alt="...">
+                    </a>
+                </footer>      
         </div>
-        <!-- End of Content Wrapper -->
-
-    </div>
     <!-- End of Page Wrapper -->
 
     <!-- Bootstrap core JavaScript-->

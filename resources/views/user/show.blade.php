@@ -134,43 +134,44 @@
                 <center>
                 <div class="container">     
            
-                <!-- Nested Row within Card Body -->
-                <div class="card" style="width: 20rem">
-                
-                  <img class="card-img-top" src="{{ asset ('images/usuario.png') }}" alt="Card image cap">
-                  <div class="card-body" style="text-transform:uppercase; ">
-                    <h5 class="card-title"><b>{{ $viewData["user"]["name"] }}</b></h5>
-                  </div>
-                  <ul class="list-group list-group-flush">
+                    <!-- Nested Row within Card Body -->
+                    <div class="card" style="width: 20rem">
+                    
+                      <img class="card-img-top" src="{{ asset ('images/usuario.png') }}" alt="Card image cap">
+                      <div class="card-body" style="text-transform:uppercase; ">
+                        <h5 class="card-title"><b>{{ $viewData["user"]["name"] }}</b></h5>
+                      </div>
+                      <ul class="list-group list-group-flush">
 
-                    <li class="list-group-item" style="text-transform:uppercase;">
-                    <b>Tipo de documento:</b> {{ $viewData["user"]["typedoc"] }}</li>
-                    <li class="list-group-item" style="text-transform:uppercase;">
-                      <b>Documento:</b> {{ $viewData["user"]["document"] }}</li>
-                    <li class="list-group-item" style="text-transform:uppercase;">
-                      <b>Contacto de Emergencia:</b> {{ $viewData["user"]["nameem"] }}</li>
-                    <li class="list-group-item" style="text-transform:uppercase;">
-                      <b>Numero de Emergencia:</b> {{ $viewData["user"]["numem"] }}</li>
+                        <li class="list-group-item" style="text-transform:uppercase;">
+                        <b>Tipo de documento:</b> {{ $viewData["user"]["typedoc"] }}</li>
+                        <li class="list-group-item" style="text-transform:uppercase;">
+                          <b>Documento:</b> {{ $viewData["user"]["document"] }}</li>
+                        <li class="list-group-item" style="text-transform:uppercase;">
+                          <b>Contacto de Emergencia:</b> {{ $viewData["user"]["nameem"] }}</li>
+                        <li class="list-group-item" style="text-transform:uppercase;">
+                          <b>Numero de Emergencia:</b> {{ $viewData["user"]["numem"] }}</li>
 
-                  </ul>
-                  <div class="card-body">
-                    <a href="#" class="card-link">Ver sesiones</a>
-                    <a href="#" class="card-link">Another link</a>
+                      </ul>
+                      <div class="card-body">
+                        <a href="#" class="card-link">Ver sesiones</a>
+                        <a href="#" class="card-link">Another link</a>
+                      </div>
+                    </div>                           
                   </div>
-                </div>                           
-              </div>
-              </center> 
-            </div>
-           
-            <footer class="sticky-footer bg-white">
-                    <div class="text-center">
-                        <img class="img-fluid" style="width: 20rem;"
+                  </center> 
+                </div>           
+                <footer class="sticky-footer bg-white">
+                  <a class="text-center" href="{{ route('home.index') }}" style="width: 26rem;position:relative; top:0px; left:850px" >
+                        <img class="img-fluid " style="width: 15rem;"
                                 src="{{ asset ('images/logofocus.png')}}" alt="...">
-                    </div>
-                    </div>
+                    </a>
                 </footer>
-            </div>
+              </div>
+            </div>   
           </div>
+        </div>     
+
     <!-- End of Page Wrapper -->
 
     <!-- Bootstrap core JavaScript-->
