@@ -18,4 +18,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/userID', 'App\Http\Controllers\Api\UserApi@view')->name("api.user.view");
+Route::post('/user/all', 'App\Http\Controllers\Api\UserApi@all')->name("api.user.all");
+Route::post('/sesion/all', 'App\Http\Controllers\Api\SesionApi@all')->name("api.sesion.all");

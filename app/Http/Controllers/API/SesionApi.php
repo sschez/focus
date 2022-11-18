@@ -7,10 +7,15 @@ use App\Models\Sesion;
 use App\Http\Resources\UserCollection;
 use Illuminate\Http\Request;
 
-class UserApi extends Controller
+class SesionApi extends Controller
 {
-    public function view(Request $request)
-    {
-        return User::findOrFail($request->input('id'));
+    public function all(Request $request)
+    {   
+        $dataApi = [];
+        $id = $request->input('id');
+        $usuario = Sesion::findOrFail((int)$id);
+        $dataApi['data'] = json_encode($usuario);
+        $dataApi['additionalData'] = json_encode([ 'empresa' => 'EAFIT', 'linkEmpresa' => 'http://127.0.0.1:8000/']);;
+        return json_encode($dataApi);
     }
 }
