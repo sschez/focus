@@ -14,7 +14,7 @@ class UserController extends Controller
         $viewData['title'] = 'Usuarios';
         $viewData['subtitle'] = 'Lista de Pacientes';
         $viewData['users'] = User::all();
-
+        
         return view('user.index')->with('viewData', $viewData);
     }
 
@@ -61,5 +61,5 @@ class UserController extends Controller
         User::destroy($id);
         return redirect()->route('user.index')
         ->with('¡Paciente Eliminado Correctamente!');
-}
+    }
 }
