@@ -9,6 +9,8 @@ class Sesion extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['dolor', 'caida', 'numSesion', 'fechaCita'];
+
     public function getId()
     {
         return $this->attributes['id'];
@@ -104,7 +106,7 @@ class Sesion extends Model
         return $this->attributes['updated_at'];
     }
 
-//----------------------------------------------------
+    //----------------------------------------------------
     public function terapia()
     {
         return $this->belongsTo(Terapia::class);

@@ -14,8 +14,19 @@ class UserController extends Controller
         $viewData['title'] = 'Usuarios';
         $viewData['subtitle'] = 'Lista de Pacientes';
         $viewData['users'] = User::all();
-
+        
         return view('user.index')->with('viewData', $viewData);
+    }
+
+    public function search(Request $request)
+    {
+        $search = $request->input('search');
+        $viewData = [];
+        $viewData['title'] = 'Usuarios';
+        $viewData['users'] = User::where('name', 'LIKE', '%' . $search . '%')
+            ->orWhere('document', 'LIKE', '%' . $search . '%')->get();
+        $viewData['search'] = $search;
+        return view('user.index')->with("viewData", $viewData);
     }
 
     public function show($id)
@@ -44,5 +55,11 @@ class UserController extends Controller
         User::create($request->only(["name","document","typedoc","nameem","numem"]));
 
         return back();
+    }
+    public function destroy($id)
+    {
+        User::destroy($id);
+        return redirect()->route('user.index')
+            ->with('¡Paciente Eliminado Correctamente!');
     }
 }
