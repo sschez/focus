@@ -37,13 +37,9 @@
                 
                 <div class="text-center">
                         <img class="img-fluid" style="width: 26rem;position:relative; top:50px; left:0px"
-                                src="{{ asset ('images/logofocus.png')}}" alt="...">
+                                src="{{ asset ('images/logo.png')}}" alt="...">
                     </div>                            
             </a>
-                    <p>
-                    <p>
-                    <p>
-                    <p>
                     <p>
                     <p>
                     <p>
@@ -103,34 +99,25 @@
         <div id="content-wrapper" class="d-flex flex-column">
 
             <!-- Main Content -->
-            <div id="content">
-
+            <div>
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-                    <!-- Sidebar Toggle (Topbar) -->
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                        <i class="fa fa-bars"></i>
-                    </button>
-
-                    <!-- Topbar Navbar -->
-                    <ul class="navbar-nav ml-auto">               
-                      
-
+                <!-- Topbar Navbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">                              
+                    <ul class="navbar-nav ml-auto">                  
                         <div class="topbar-divider d-none d-sm-block"></div>
-
                         <!-- Nav Item - User Information -->
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Alejandro</span>
-                                <img class="img-profile rounded-circle"
-                                    src="{{ asset('images/undraw_profile.svg') }}">
-                            </a>
-                    
+                            <a class="nav-link dropdown-toggle" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" >
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 large" style="position:relative; top:50px; right:70px">Alejandro</span>
+                                <img class="img-profile rounded-circle" style="position:relative; top:50px; right:70px" src="{{ asset('images/undraw_profile.svg') }}">
+                            </a>  
+                        </div>                          
                     </ul>
-
                 </nav>
+                <p>
+                <p>
+                <p>
+                <p>
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
@@ -193,7 +180,7 @@
     <footer class="sticky-footer bg-white">
                 <a class="text-center" href="{{ route('home.index') }}" style="width: 26rem;position:relative; top:0px; left:350px" >
                         <img class="img-fluid " style="width: 15rem;"
-                                src="{{ asset ('images/logofocus.png')}}" alt="...">
+                                src="{{ asset ('images/logo.png')}}" alt="...">
                     </a>
                 </footer>
     <!-- Scroll to Top Button-->

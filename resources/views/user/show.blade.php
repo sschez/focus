@@ -37,13 +37,9 @@
                 
                 <div class="text-center">
                         <img class="img-fluid" style="width: 26rem;position:relative; top:50px; left:0px"
-                                src="{{ asset ('images/logofocus.png')}}" alt="...">
+                                src="{{ asset ('images/logo.png')}}" alt="...">
                     </div>                            
             </a>
-                    <p>
-                    <p>
-                    <p>
-                    <p>
                     <p>
                     <p>
                     <p>
@@ -154,8 +150,14 @@
 
                       </ul>
                       <div class="card-body">
-                        <a href="#" class="card-link">Ver sesiones</a>
-                        <a href="#" class="card-link">Another link</a>
+                        <a href="#" class="btn-list btn btn-outline-primary">Ver sesiones</a>
+                        <p>
+                        <form action="{{ route('user.destroy', $viewData['user']->id) }}" method="POST">
+                            @csrf
+                            @method('delete')
+                            <button type="submit" class="btn btn-outline-danger">Eliminar</button>
+                        </form>
+                        
                       </div>
                     </div>                           
                   </div>
@@ -164,7 +166,7 @@
                 <footer class="sticky-footer bg-white">
                   <a class="text-center" href="{{ route('home.index') }}" style="width: 26rem;position:relative; top:0px; left:850px" >
                         <img class="img-fluid " style="width: 15rem;"
-                                src="{{ asset ('images/logofocus.png')}}" alt="...">
+                                src="{{ asset ('images/logo.png')}}" alt="...">
                     </a>
                 </footer>
               </div>

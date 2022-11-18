@@ -36,16 +36,13 @@
                 
                 <div class="text-center">
                         <img class="img-fluid" style="width: 26rem;position:relative; top:50px; left:0px"
-                                src="{{ asset ('images/logofocus.png')}}" alt="...">
+                                src="{{ asset ('images/logo.png')}}" alt="...">
                     </div>                            
             </a>
                     <p>
                     <p>
                     <p>
-                    <p>
-                    <p>
-                    <p>
-                    <p>
+
             </a>
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
@@ -346,7 +343,7 @@
                 <footer class="sticky-footer bg-white">
                 <a class="text-center" href="{{ route('home.index') }}" style="width: 26rem;position:relative; top:0px; left:800px" >
                         <img class="img-fluid " style="width: 15rem;"
-                                src="{{ asset ('images/logofocus.png')}}" alt="...">
+                                src="{{ asset ('images/logo.png')}}" alt="...">
                     </a>
                 </footer>
             </div>

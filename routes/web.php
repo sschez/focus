@@ -15,11 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'App\Http\Controllers\HomeController@index')->name('home.index');
 Route::get('/user', 'App\Http\Controllers\UserController@index')->name('user.index');
-Route::get('/admin/user/search', 'App\Http\Controllers\UserController@search')
-->name("user.search");;
-Route::get('/user/create', 'App\Http\Controllers\UserController@create')
-->name('user.create');
-Route::post('/user/save', 'App\Http\Controllers\UserController@save')
-->name('user.save');
-Route::get('/user/{id}', 'App\Http\Controllers\UserController@show')
-->name('user.show');
+Route::get('/user/search', 'App\Http\Controllers\UserController@search')->name("user.search");;
+Route::get('/user/create', 'App\Http\Controllers\UserController@create')->name('user.create');
+Route::post('/user/save', 'App\Http\Controllers\UserController@save')->name('user.save');
+Route::delete('/user/{id}/delete', 'App\Http\Controllers\UserController@destroy')->name("user.destroy");
+Route::get('/user/{id}', 'App\Http\Controllers\UserController@show')->name('user.show');

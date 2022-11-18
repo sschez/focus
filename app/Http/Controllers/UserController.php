@@ -56,4 +56,10 @@ class UserController extends Controller
 
         return back();
     }
+    public function destroy($id)
+    {
+        User::destroy($id);
+        return redirect()->route('user.index')
+        ->with('¡Paciente Eliminado Correctamente!');
+}
 }
