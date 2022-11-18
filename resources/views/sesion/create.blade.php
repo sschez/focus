@@ -58,17 +58,20 @@
                                                             <option value= "10" > 10 </option>
                                             </select> 
                                     </div>
-                                </div>                                
+                                </div>               
+                                <h6>Has tenido Caidas </h6>                 
                                 <div class="form-group row">
-                                <div class="col-sm-12 mb-3 mb-sm-4" >
-                                            <select name ="ejercicio">
-                                                            <option selected = "" disabled="">Ejercicio</option>
-                                                            <option value= "Extension Hombro" > Extension Hombro </option>
-                                            </select> 
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="caidas" id="si">
+                                    <label class="form-check-label" for="si">
+                                        Si
+                                    </label>
                                     </div>
-                                    <div class="col-sm-12 mb-3 mb-sm-4">
-                                     <textarea class="form-control form-control-user" name="condicionMedica" value="{{ old('condicionMedica') }}"> Condicion Médica</textarea>
-                                    </div>                                    
+                                    <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="caidas" id="no" checked>
+                                    <label class="form-check-label" for="no">
+                                        No
+                                    </label>
                                 </div>
                                 <input type="submit" class="btn btn-primary btn-user btn-block" value="Crear Terapia" />
                             </form>       
