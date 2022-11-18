@@ -9,6 +9,8 @@ class Sesion extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['dolor', 'caida', 'numSesion', 'fechaCita'];
+
     public function getId()
     {
         return $this->attributes['id'];

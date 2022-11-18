@@ -26,3 +26,9 @@ Route::get('/terapia/create', 'App\Http\Controllers\TerapiaController@create')->
 Route::post('/terapia/save', 'App\Http\Controllers\TerapiaController@save')->name('terapia.save');
 Route::delete('/terapia/{id}/delete', 'App\Http\Controllers\TerapiaController@destroy')->name("terapia.destroy");
 Route::get('/terapia/{id}', 'App\Http\Controllers\TerapiaController@show')->name('terapia.show');
+Route::get('/sesion', 'App\Http\Controllers\SesionController@index')->name('sesion.index');
+Route::get('/sesion/search', 'App\Http\Controllers\SesionController@search')->name("sesion.search");;
+Route::get('/sesion/create', 'App\Http\Controllers\SesionController@create')->name('sesion.create');
+Route::post('/sesion/save', 'App\Http\Controllers\SesionController@save')->name('sesion.save');
+Route::delete('/sesion/{id}/delete', 'App\Http\Controllers\SesionController@destroy')->name("sesion.destroy");
+Route::get('/sesion/{id}', 'App\Http\Controllers\SesionController@show')->name('sesion.show');

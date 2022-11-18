@@ -93,6 +93,26 @@
                 </a>
             </li>        
 
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading mx-5 my-3">
+                Sesiones
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item active">
+            <a type="button" class="btn btn-outline-light mx-4" href="{{ route('sesion.create') }}">
+                    <span>Crear Sesion</span>
+                </a>
+            </li>
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item active">
+            <a type="button" class="btn btn-outline-light mx-4 my-3" href="{{ route('sesion.index') }}">
+                    <span>Ver Sesion</span>
+                </a>
+            </li>        
         </ul>
         <!-- End of Sidebar -->
 
