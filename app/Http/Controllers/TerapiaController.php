@@ -13,7 +13,7 @@ class TerapiaController extends Controller
         $viewData = [];
         $viewData['title'] = 'Terapias';
         $viewData['subtitle'] = 'Lista de Terapias';
-        $viewData['terapias'] = Terapia::all();
+        $viewData['terapias'] = Terapia::orderBy('id', 'asc')->get();
 
         return view('terapia.index')->with('viewData', $viewData);
     }

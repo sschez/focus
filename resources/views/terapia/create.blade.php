@@ -66,7 +66,7 @@
                                      <textarea class="form-control form-control-user" name="condicionMedica" value="{{ old('condicionMedica') }}"> Condicion Médica</textarea>
                                     </div>                                    
                                 </div>
-                                <input type="submit" class="btn btn-primary btn-user btn-block" value="Crear Terapia" />
+                                <input type="submit" class="btn-user btn-block" style="color: white; background-color: #1D3B56" value="Crear Paciente" />
                             </form>       
                             </form>                 
                         </div>

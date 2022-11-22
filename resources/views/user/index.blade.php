@@ -13,7 +13,7 @@
                                 <div class="col-md-2 ">
                                     <input type="text" class="form-control" name="search">
                                 </div>
-                                <button type="submit" class="btn-list btn btn-primary btn-search col-md-1">
+                                <button type="submit" class="btn-list btn-search col-md-1" style="color: white; background-color: #1D3B56">
                                     <i class="bi-search"></i>
                                     Buscar
                                 </button>
