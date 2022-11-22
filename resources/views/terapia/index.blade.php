@@ -40,7 +40,8 @@
                                         @foreach ($viewData['terapias'] as $terapia)                                 
                                             <tr style="text-transform:uppercase;">
                                                 <td>                                                    
-                                                    <a href="{{ route('terapia.show', ['id' => $terapia->getId()]) }}"
+                                                    <!---<a href="{{ route('terapia.show', ['id' => $terapia->getId()]) }}"-->
+                                                    <a href="#"
                                                     class="table table-bordered btn btn-outline-primary">{{ $terapia->getUser()['name'] }}</a>
                                                     
                                                 </td>
@@ -56,8 +57,9 @@
                                                     {{ $terapia->getEjercicio() }}
                                                     
                                                 </td>
-                                                <td>                                                    
-                                                    <a href="{{ route('terapia.show', ['id' => $terapia->getId()]) }}"
+                                                <td>                         
+                                                    <!---<a href="{{ route('terapia.show', ['id' => $terapia->getId()]) }}"-->                           
+                                                    <a href="#"
                                                         class="table table-bordered btn btn-outline-success">Ver Progreso</a>
                                                         <form action="{{ route('terapia.destroy', $terapia->id) }}" method="POST">
                                                             @csrf

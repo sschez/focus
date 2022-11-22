@@ -25,6 +25,7 @@
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
+                                            <th>ID</th> 
                                             <th>Nombre</th>                                            
                                             <th>Documento</th>
                                             <th>Nombre de Emergencia</th>
@@ -34,6 +35,10 @@
                                     <tbody>   
                                         @foreach ($viewData['users'] as $user)                                 
                                             <tr style="text-transform:uppercase;">
+                                            <td>                                                    
+                                                    {{ $user->getId() }}
+                                                    
+                                                </td>
                                                 <td>                                                    
                                                     <a href="{{ route('user.show', ['id' => $user->getId()]) }}"
                                                     class="table table-bordered">{{ $user->getName() }}</a>

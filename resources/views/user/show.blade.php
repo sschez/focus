@@ -3,7 +3,7 @@
 @section('content')
                 <!-- Begin Page Content -->
                 <div class="container">                
-                    <!-- Nested Row within Card Body -->
+                    <!-- Nested Row within Card Body
                     <div class ="row">
                         <div class="col-xl-8 col-lg-7">    
                             <div class="card shadow mb-4">                    
@@ -32,7 +32,7 @@
                                 </div>
                             </div>
                         </div>        
-
+ -->
                         <div class="col-xl-4 col-lg-7">    
                             <div class="card shadow mb-4">                    
                                 <img class="card-img-top" src="{{ asset ('images/usuario.png') }}" alt="Card image cap">

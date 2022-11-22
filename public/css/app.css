@@ -55,7 +55,7 @@ body {
   line-height: 1.5;
   color: #858796;
   text-align: left;
-  background-color: #fff;
+  background-color: #ECECEC;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -4129,6 +4129,7 @@ input[type="button"].btn-block {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+  background-color: #1D3B56;
 }
 
 .navbar-nav .nav-link {

@@ -27,7 +27,7 @@
     <div id="wrapper">
     
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('home.index') }}">
                 <div class="sidebar-brand-icon rotate-n-15">
@@ -36,7 +36,7 @@
                 
                 <div class="text-center">
                         <img class="img-fluid" style="width: 26rem;position:relative; top:50px; left:0px"
-                                src="{{ asset ('images/logo.png')}}" alt="...">
+                                src="{{ asset ('images/logoblanco.png')}}" alt="...">
                     </div>                            
             </a>
                     <p>
@@ -107,12 +107,12 @@
                 </a>
             </li>
 
-            <!-- Nav Item - Charts -->
+            <!-- Nav Item - Charts 
             <li class="nav-item active">
             <a type="button" class="btn btn-outline-light mx-4 my-3" href="{{ route('sesion.index') }}">
                     <span>Ver Sesion</span>
                 </a>
-            </li>        
+            </li>     -->   
         </ul>
         <!-- End of Sidebar -->
 
@@ -122,13 +122,11 @@
             <!-- Main Content -->
             <div>
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">                              
+                <nav class="navbar">                              
                     <!-- Topbar Navbar -->
-                    <ul class="navbar-nav ml-auto">                  
-                        <div class="topbar-divider d-none d-sm-block"></div>
+                    <ul class = "ml-auto">                  
                         <!-- Nav Item - User Information -->
-                            <a class="nav-link dropdown-toggle" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" >
+                            <a>
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 large" style="position:relative; top:50px; right:70px">Alejandro</span>
                                 <img class="img-profile rounded-circle" style="position:relative; top:50px; right:70px" src="{{ asset('images/undraw_profile.svg') }}">
                             </a>  
