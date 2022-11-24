@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('doctor');
             $table->string('condicionMedica');
             $table->string('numSesiones');
-            $table->string('ejercicio');
+            $table->json('ejercicio');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();

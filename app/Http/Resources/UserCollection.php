@@ -10,10 +10,7 @@ class UserCollection extends ResourceCollection
     {
         return [
             'data' => $this->collection,
-            'additionalData' => "[
-                'empresa' => 'EAFIT',
-                'linkEmpresa' => 'http://127.0.0.1:8000/paciente',
-            ]",
+            'additionalData' => "['empresa' => 'EAFIT', 'linkEmpresa' => 'http://127.0.0.1:8000/paciente']",
         ];
     }
 }

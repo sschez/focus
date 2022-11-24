@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('dolor');
             $table->integer('caida');
             $table->integer('numSesion');
+            $table->integer('series');
             $table->integer('repRealizadas')->nullable();
             $table->float('extensionMax')->nullable();
             $table->json('rangos')->nullable();
