@@ -2,7 +2,8 @@
 @section('title', 'Focus')
 @section('content')
                 <!-- Begin Page Content -->
-                <div class="container">                
+                <div class="container">   
+                <div class ="row">             
                     <!-- Nested Row within Card Body
                     <div class ="row">
                         <div class="col-xl-8 col-lg-7">    
@@ -60,6 +61,20 @@
                                 </div>
                             </div>
                         </div>   
+                        <div class="col-xl-8 col-lg-7">    
+                            <div class="card shadow mb-4">                    
+                                <div class="card-header py-3">
+                                        <h6 class="m-0 font-weight-bold text-primary">Area Chart</h6>
+                                    </div>
+                                    <div class="card-body">
+                                    <div style="width: 800px;"><canvas id="mychart"></canvas></div>
+
+                                    <!-- <script type="module" src="dimensions.js"></script> -->
+                                    <script type="module" src="{{ asset('/mdb.js')}}"></script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>     
 
                     </div>                   
                 <footer class="sticky-footer bg-white">

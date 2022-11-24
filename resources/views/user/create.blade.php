@@ -5,7 +5,7 @@
 <div class="container">    
 <!-- Nested Row within Card Body -->
     <div class="row">
-        <div class="col-lg-4 mx-3 d-none d-lg-block bg-register-image"></div>
+        <div class="col-lg-4 my-3 d-none d-lg-block bg-register-image"></div>
             <div class="col-lg-7">
                 <div class="p-5">
                     <div class="text-center">
