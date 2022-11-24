@@ -9,57 +9,53 @@
                     </div>
                     <!-- Content Row -->
                     <div class="container">
-                        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                                <!-- Indicators -->
-                            <ol class="carousel-indicators">
-                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                            </ol>
-
-                            <div class="carousel-inner">
-                                <div class="carousel-item active" data-bs-interval="20000" >
-                                
-                                    <img src="/images/green.png" class="d-block w-100" alt="..." >
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h5>1 slide label</h5>
-                                        <p>Some representative placeholder content for the first slide.</p>
+                        <div id="carouselExampleCaptions" class="carousel slide mx-auto" data-bs-ride="carousel" style="heigth: 800px">
+                            <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner mx-auto" style="width: 400px; heigth: 200px">
+                                <div class="carousel-item active" data-bs-interval="4000">
+                                <video class="img-fluid" autoplay loop muted>
+                                    <source src="/images/video/E1.mp4" type="video/mp4" />
+                                </video>
+                                    <div class="carousel-caption d-none d-md-block mx-auto" style="width: 200px; heigth: 800px">
+                                        <h1 class="badge text-bg-success"><FONT SIZE=5>Martha Restrepo</font></h1><br>
+                                        <span class="badge text-bg-info"><FONT SIZE=4>Tiempo Restante</font></span>
+                                        <span class="badge text-bg-primary"><FONT SIZE=3>42 min</font></span><br>  
+                                        <span class="badge text-bg-info"><FONT SIZE=4>Ejercicio</font></span>                                      
+                                        <span class="badge text-bg-primary"><FONT SIZE=3>Abducción de Cadera</font></span>
+                                        
                                     </div>
                                 </div>
-                                <div class="carousel-item" data-bs-interval="20000">
-                                    <img src="/images/naranja.png" class="d-block w-100" alt="..." >
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h5>2 slide label</h5>
-                                        <p>Some representative placeholder content for the first slide.</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item"  data-bs-interval="20000">
-                                    <img src="/images/rojo.png" class="d-block w-100" alt="..." >
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h5>3 slide label</h5>
-                                        <p>Some representative placeholder content for the first slide.</p>
+                                <div class="carousel-item" data-bs-interval="4000">
+                                    <video class="img-fluid" autoplay loop muted>
+                                        <source src="/images/video/E2.mp4" type="video/mp4" />
+                                    </video>
+                                    <div class="carousel-caption d-none d-md-block mx-auto" style="width: 200px; heigth: 800px">
+                                        <h1 class="badge text-bg-warning"><FONT SIZE=5>Silvia Restrepo</font></h1><br>
+                                        <span class="badge text-bg-info"><FONT SIZE=4>Tiempo Restante</font></span>
+                                        <span class="badge text-bg-primary"><FONT SIZE=3>28 min</font></span><br>  
+                                        <span class="badge text-bg-info"><FONT SIZE=4>Ejercicio</font></span>                                      
+                                        <span class="badge text-bg-primary"><FONT SIZE=3>Abducción de Cadera</font></span>
                                     </div>
                                 </div>
                             </div>
-                        
-                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a> 
+                            <button style="background-color: #1D3B56" class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button style="background-color: #1D3B56" class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                            </button>
                         </div>
                     </div>
                 </div>
                     <!-- Content Row -->
-
                     <div>
-
-                        <!-- Area Chart -->
                         <div>
-
                             <div>
                                 <!-- Card Header - Dropdown -->
                                 <div

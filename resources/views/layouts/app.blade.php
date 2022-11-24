@@ -34,6 +34,9 @@
     <!-- Page level custom scripts -->
     <script src="{{ asset('public/js/demo/chart-area-demo.js') }}"></script>
     <script src="{{ asset('public/js/demo/chart-pie-demo.js') }}"></script>
+
+    <!-- Scripts -->
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 
 <body id="page-top">
@@ -122,12 +125,12 @@
                 </a>
             </li>
 
-            <!-- Nav Item - Charts 
+            <!-- Nav Item - Charts --
             <li class="nav-item active">
             <a type="button" class="btn btn-outline-light mx-4 my-3" href="{{ route('sesion.index') }}">
                     <span>Ver Sesion</span>
                 </a>
-            </li>     -->   
+            </li>     -->
         </ul>
         <!-- End of Sidebar -->
 
