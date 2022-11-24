@@ -34,6 +34,12 @@
     <!-- Page level custom scripts -->
     <script src="{{ asset('public/js/demo/chart-area-demo.js') }}"></script>
     <script src="{{ asset('public/js/demo/chart-pie-demo.js') }}"></script>
+    <script src="path/to/chartjs/dist/chart.umd.js"></script>
+    <script>
+        const myChart = new Chart(ctx, {...});
+    </script>
+
+    <script src="{{ asset('public/js/mdb.js') }}"></script>
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
@@ -139,24 +145,7 @@
 
             <!-- Main Content -->
             <div>
-                <!-- Topbar -->
-                <nav class="navbar">                              
-                    <!-- Topbar Navbar -->
-                    <ul class = "ml-auto">                  
-                        <!-- Nav Item - User Information -->
-                            <a>
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 large" style="position:relative; top:50px; right:70px">Alejandro</span>
-                                <img class="img-profile rounded-circle" style="position:relative; top:50px; right:70px" src="{{ asset('images/undraw_profile.svg') }}">
-                            </a>  
-                        </div>                          
-                    </ul>
-                </nav>
-                <p>
-                <p>
-                <p>
-                <p>
                 @yield('content')
-                <!-- End of Topbar -->
             </div>
         </div>
     </div>

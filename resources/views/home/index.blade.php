@@ -3,10 +3,6 @@
 @section('content')
                 <!-- Begin Page Content -->
                 <div class="container">
-                    <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">PANTALLA PRINCIPAL</h1>
-                    </div>
                     <!-- Content Row -->
                     <div class="container">
                         <div id="carouselExampleCaptions" class="carousel slide mx-auto" data-bs-ride="carousel" style="heigth: 800px">
@@ -17,6 +13,7 @@
                             </div>
                             <div class="carousel-inner mx-auto" style="width: 400px; heigth: 200px">
                                 <div class="carousel-item active" data-bs-interval="4000">
+                                <h1 class="badge text-bg-primary mx-auto"><FONT SIZE=5>MODULO 1</font></h1>
                                 <video class="img-fluid" autoplay loop muted>
                                     <source src="/images/video/E1.mp4" type="video/mp4" />
                                 </video>
@@ -25,11 +22,12 @@
                                         <span class="badge text-bg-info"><FONT SIZE=4>Tiempo Restante</font></span>
                                         <span class="badge text-bg-primary"><FONT SIZE=3>42 min</font></span><br>  
                                         <span class="badge text-bg-info"><FONT SIZE=4>Ejercicio</font></span>                                      
-                                        <span class="badge text-bg-primary"><FONT SIZE=3>Abducción de Cadera</font></span>
+                                        <span class="badge text-bg-primary"><FONT SIZE=3>Abducción de Hombros</font></span>
                                         
                                     </div>
                                 </div>
                                 <div class="carousel-item" data-bs-interval="4000">
+                                <h1 class="badge text-bg-primary mx-auto"><FONT SIZE=5>MODULO 2</font></h1>
                                     <video class="img-fluid" autoplay loop muted>
                                         <source src="/images/video/E2.mp4" type="video/mp4" />
                                     </video>
@@ -37,6 +35,17 @@
                                         <h1 class="badge text-bg-warning"><FONT SIZE=5>Silvia Restrepo</font></h1><br>
                                         <span class="badge text-bg-info"><FONT SIZE=4>Tiempo Restante</font></span>
                                         <span class="badge text-bg-primary"><FONT SIZE=3>28 min</font></span><br>  
+                                        <span class="badge text-bg-info"><FONT SIZE=4>Ejercicio</font></span>                                      
+                                        <span class="badge text-bg-primary"><FONT SIZE=3>Abducción de Cadera</font></span>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-bs-interval="4000">
+                                <h1 class="badge text-bg-primary mx-auto"><FONT SIZE=5>MODULO 3</font></h1>
+                                    <img src="/images/A3.png" class="d-block w-100" alt="..." >
+                                    <div class="carousel-caption d-none d-md-block mx-auto" style="width: 200px; heigth: 800px">
+                                        <h1   class= "badge text-bg-danger"><FONT SIZE=5>Patricio Azlate</font></h1><br>
+                                        <span class="badge text-bg-info"><FONT SIZE=4>Tiempo Restante</font></span>
+                                        <span class="badge text-bg-primary"><FONT SIZE=3>15 min</font></span><br>  
                                         <span class="badge text-bg-info"><FONT SIZE=4>Ejercicio</font></span>                                      
                                         <span class="badge text-bg-primary"><FONT SIZE=3>Abducción de Cadera</font></span>
                                     </div>
@@ -60,7 +69,7 @@
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="h3 mb-0 text-grey-800">MI SEMANA</h6>
+                                    <h6 class="h2 mb-0 bg-gradient-info text-dark mx-5">MI SEMANA</h6>
                                 </div>
                                 <!-- Card Body -->
                                 <div  style= "text-align:center;">
@@ -81,93 +90,96 @@
                                 <tbody>
                                     <tr>
                                     <th class="table-success" style="color:black" scope="row">7:00 am</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
+                                        <td>
+                                        </td>
+                                        <td>Martha Restrepo</td>
                                         <td></td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
+                                        <td>Martha Restrepo</td>
+                                        <td>Martha Restrepo</td>
+                                        <td></td>
                                     </tr>
                                     <tr>
                                     <th class="table-success" style="color:black" scope="row">8:00 am</th>
-                                        <td>Jacob</td>
-                                        <td>Thornton</td>
-                                        <td>@fat</td>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
                                     </tr>
                                     <tr>
                                     <th class="table-success" style="color:black" scope="row">9:00 am</th>
-                                        <td>Larry the Bird</td>
-                                        <td>@twitter</td>
-                                        <td>@fat</td>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
+                                        <td></td>
+                                        <td>Silvia Restrepo</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>Martha Restrepo<br>
+                                        Silvana Restrepo<br>
+                                        Albeiro Alzate</td>
+                                        <td></td>
                                     </tr>
                                     <tr>
                                     <th class="table-success" style="color:black" scope="row">10:00 am</th>
-                                        <td>Larry the Bird</td>
-                                        <td>@twitter</td>
-                                        <td>@fat</td>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
                                     </tr>
                                     <tr>
                                     <th class="table-success" style="color:black" scope="row">11:00 am</th>
-                                        <td>Larry the Bird</td>
-                                        <td>@twitter</td>
-                                        <td>@fat</td>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
                                     </tr>
                                     <tr>
                                     <th class="table-success" style="color:black" scope="row">12:00 m</th>
-                                        <td>Larry the Bird</td>
-                                        <td>@twitter</td>
-                                        <td>@fat</td>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
+                                        <td>Albeiro Alzate</td>
+                                        <td>Albeiro Alzate</td>
+                                        <td>Albeiro Alzate</td>
+                                        <td>Albeiro Alzate</td>
+                                        <td></td>
+                                        <td>Albeiro Alzate</td>
                                     </tr>
                                     <tr>
                                     <th class="table-success" style="color:black" scope="row">2:00 pm</th>
-                                        <td>Larry the Bird</td>
-                                        <td>@twitter</td>
-                                        <td>@fat</td>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
                                     </tr>
                                     <tr>
                                     <th class="table-success" style="color:black" scope="row">3:00 pm</th>
-                                        <td>Larry the Bird</td>
-                                        <td>@twitter</td>
-                                        <td>@fat</td>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
                                     </tr>
                                     <tr>
                                     <th class="table-success" style="color:black" scope="row">4:00 pm</th>
-                                        <td>Larry the Bird</td>
-                                        <td>@twitter</td>
-                                        <td>@fat</td>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>Silvana Restrepo</td>
+                                        <td>Silvana Restrepo</td>
+                                        <td></td>
+                                        <td></td>
                                     </tr>
                                     <tr>
                                     <th class="table-success" style="color:black" scope="row">5:00 pm</th>
-                                        <td>Larry the Bird</td>
-                                        <td>@twitter</td>
-                                        <td>@fat</td>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
                                     </tr>
                                 </tbody>
                                 </table>
