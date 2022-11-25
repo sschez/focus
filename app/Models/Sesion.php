@@ -81,8 +81,6 @@ class Sesion extends Model
         $this->attributes['rangos'] = $rangos;
     }
 
-    }
-
     public function getCreated_at()
     {
         return $this->attributes['created_at'];

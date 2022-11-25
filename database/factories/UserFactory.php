@@ -11,7 +11,7 @@ class UserFactory extends Factory
    
     public function definition()
     {
-        $id = ['cc', 'ti', 'ce'];
+        $id = ['cc', 'ce'];
         $recomenda = ["Bien", "Regular", "No tan bien", "Mal"];
         $antece = ["Si", "No", "Luxación de hombro", "Operación de hombro"];
         $recomend =  $this->faker->numberBetween($min = 0, $max = 1);
@@ -19,11 +19,11 @@ class UserFactory extends Factory
 
         return [
             'name' => $this->faker->name,
-            'typedoc' => $id[$this->faker->numberBetween($min = 0, $max = 2)],
+            "edad" => $this->faker->numberBetween($min = 55, $max = 75),
+            'typedoc' => $id[$this->faker->numberBetween($min = 0, $max = 1)],
             'document' => $this->faker->numberBetween($min = 100000000, $max = 999999999),
             'recomend' => $recomenda[$recomend],
-            'antec' => $antece[$antec],
-            'edad' => $id[$this->faker->numberBetween($min = 0, $max = 85)],
+            'antec' => $antece[$antec]
         ];
     }
 }
