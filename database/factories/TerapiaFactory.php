@@ -27,9 +27,9 @@ class TerapiaFactory extends Factory
             'doctor' => $doctores[$this->faker->numberBetween($min = 0, $max = 2)],
             'condicionMedica' => $condiciones[$condicion],
             'numSesiones' => $this->faker->numberBetween($min = 3, $max = 10),
-            'ejercicio' => json_encode(["1" => "Extensión de hombro izquierdo",
-                                        "2" => "Rotación de cadera"]),
+            'ejercicio' => json_encode(["ejs" => ["Extensión de hombro izquierdo", "Rotación de cadera"]]),
             'user_id' => $userID[$this->faker->unique->numberBetween($min = 0, $max = 4)]
         ];
     }
 }
+ 
