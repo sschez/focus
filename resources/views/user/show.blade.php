@@ -40,15 +40,15 @@
                         <div class="col-xl-8 col-lg-7">    
                             <div class="card shadow mb-4">                    
                                 <div class="card-header py-3">
-                                        <h6 class="m-0 font-weight-bold text-primary">Progreso de Extensión Máxima</h6>
+                                        <h6 class="m-0 font-weight-bold text-primary">Sesion VS Promedio de rep VS Ángulo máximo x Sesión</h6>
                                 </div>
                                 <div class="card-body w-100 mw-100">
-                                    <canvas id="myChart"></canvas>
+                                    <canvas id="mixChart"></canvas>
                                 </div>
                             </div>
                             <div class="card shadow mb-4">                    
                                 <div class="card-header py-3">
-                                        <h6 class="m-0 font-weight-bold text-primary"></h6>
+                                        <h6 class="m-0 font-weight-bold text-primary">Progreso de Extensión Máxima</h6>
                                 </div>
                                 <div class="card-body w-100 mw-100">
                                     <canvas id="myChart"></canvas>
@@ -86,6 +86,49 @@
             }
             }
         }
-        });
+        });        
+</script>
+<script defer>
+
+    const data = {
+      labels: {!! json_encode($viewData['plotLabels']) !!},
+      datasets: [{
+        type:'bar',
+        label: 'Promedio de Repeticiones x Sesión',
+        data: {!! json_encode($viewData['plotPromrep']) !!},
+        backgroundColor: [
+          'rgba(255, 26, 104, 0.2)'
+        ],
+        borderColor: [
+          'rgba(255, 26, 104, 1)',
+        ],
+        borderWidth: 1
+      },{
+        type: 'line',
+        label: 'Ángulo Máximo por Sesión',
+        data: {!! json_encode($viewData['plotValues']) !!},
+        fill: false,
+        borderColor: 'rgb(54, 162, 235)'
+      }]
+    };
+
+    const config = {
+      type: 'bar',
+      data,
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    };
+    
+    
+    const myChart = new Chart(
+      document.getElementById('mixChart'),
+      config
+    );
+
 </script>
 @endsection

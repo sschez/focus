@@ -41,7 +41,7 @@
                                             <tr style="text-transform:uppercase;">
                                                 <td>                                                    
                                                     <!---<a href="{{ route('terapia.show', ['id' => $terapia->getId()]) }}"-->
-                                                    <a href="#"
+                                                    <a href="{{ route('user.show',['id' => $terapia->getUser()['id']])}}"
                                                     class="table table-bordered btn btn-outline-primary">{{ $terapia->getUser()['name'] }}</a>
                                                     
                                                 </td>

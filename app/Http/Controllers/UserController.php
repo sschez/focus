@@ -40,6 +40,7 @@ class UserController extends Controller
         $viewData['user'] = $user;
         $viewData['plotLabels'] = array();
         $viewData['plotValues'] = array();
+        $viewData['plotPromrep'] = array();
         try {
             $sesiones = $user->getTerapia()->getNumSesiones();
             for ($i = 0; $i < $sesiones; $i++) {
@@ -49,10 +50,12 @@ class UserController extends Controller
             $sesionList = Sesion::where('terapia_id', $user->getTerapia()->getId())->orderBy('created_at')->get();
             foreach ($sesionList as $s) {
                 array_push($viewData['plotValues'], $s->getExtensionMax());
+                array_push($viewData['plotPromrep'], $s->getRepRealizadas());
             }
         } catch (Exception $err) {
             $viewData['plotLabels'] = array();
             $viewData['plotValues'] = array();
+            $viewData['plotPromrep'] = array();
         } finally {
             return view('user.show')->with('viewData', $viewData);
         }
