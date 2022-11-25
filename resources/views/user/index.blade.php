@@ -26,18 +26,18 @@
                                     <thead>
                                         <tr>
                                             <th>ID</th> 
-                                            <th>Nombre</th>                                            
-                                            <th>Documento</th>
-                                            <th>Nombre de Emergencia</th>
-                                            <th>Numero de Emergencia</th>
+                                            <th>Nombre</th>              
+                                            <th>Edad</th>                               
+                                            <th>Documento</th>                                            
+
                                         </tr>
                                     </thead>
                                     <tbody>   
                                         @foreach ($viewData['users'] as $user)                                 
                                             <tr style="text-transform:uppercase;">
-                                            <td>                                                    
+                                                <td>                                                    
                                                     {{ $user->getId() }}
-                                                    
+                                                
                                                 </td>
                                                 <td>                                                    
                                                     <a href="{{ route('user.show', ['id' => $user->getId()]) }}"
@@ -45,15 +45,11 @@
                                                     
                                                 </td>
                                                 <td>                                                    
+                                                    {{ $user->getEdad() }}
+                                                    
+                                                </td>
+                                                <td>                                                    
                                                     {{ $user->getDocument() }}
-                                                    
-                                                </td>
-                                                <td>                                                    
-                                                    {{ $user->getNameem() }}
-                                                    
-                                                </td>
-                                                <td>                                                    
-                                                    {{ $user->getNumem() }}
                                                     
                                                 </td>
                                             </tr>    

@@ -16,10 +16,11 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('document');
-            $table->string('typedoc');            
-            $table->string('nameem');
-            $table->string('numem');
+            $table->integer('edad');
+            $table->string('typedoc'); 
+            $table->string('document');                      
+            $table->string('recomend');
+            $table->string('antec');
             $table->timestamps();
         });
     }

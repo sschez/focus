@@ -21,7 +21,7 @@ class User extends Model
      * $this->attributes['namem'] - string - contains the emergency name
      * $this->attributes['numem'] - int - contains the emerency number
      */
-    protected $fillable = ['name', 'typedoc', 'document', 'nameem', 'numem'];
+    protected $fillable = ['name', 'typedoc', 'document','edad','recomend','antec'];
 
     public static function validate(Request $request)
     {
@@ -29,8 +29,9 @@ class User extends Model
             "name" =>       "required",
             "document" =>   "required",
             "typedoc" =>    "required",            
-            "nameem" =>     "required",
-            "numem" =>      "required"
+            "edad" =>       "required",
+            "recomend" =>    "required",
+            "antec" =>       "required",
         ];
 
         $request->validate($rules);
@@ -77,24 +78,34 @@ class User extends Model
     }
 
 
-    public function getNameem()
+    public function getEdad()
     {
-        return $this->attributes['nameem'];
+        return $this->attributes['edad'];
     }
 
-    public function setNameem($nameem)
+    public function setEdad($edad)
     {
-        $this->attributes['nameem'] = $nameem;
+        $this->attributes['edad'] = $edad;
     }
 
-    public function getNumem()
+    public function getAntec()
     {
-        return $this->attributes['numem'];
+        return $this->attributes['antec'];
     }
 
-    public function setNumem($numem)
+    public function setAntec($antec)
     {
-        $this->attributes['numem'] = $numem;
+        $this->attributes['antec'] = $antec;
+    }
+
+    public function getRecomend()
+    {
+        return $this->attributes['recomend'];
+    }
+
+    public function setRecomend($recomend)
+    {
+        $this->attributes['recomend'] = $recomend;
     }
 
     public function Terapia()

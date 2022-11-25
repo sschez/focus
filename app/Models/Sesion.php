@@ -9,7 +9,7 @@ class Sesion extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['dolor', 'caida', 'numSesion', 'fechaCita'];
+    protected $fillable = ['dolor', 'caida', 'numSesion'];
 
     public function getId()
     {
@@ -81,14 +81,6 @@ class Sesion extends Model
         $this->attributes['rangos'] = $rangos;
     }
 
-    public function getFechaCita()
-    {
-        return $this->attributes['fechaCita'];
-    }
-
-    public function setFechaCita($fechaCita)
-    {
-        $this->attributes['fechaCita'] = $fechaCita;
     }
 
     public function getCreated_at()
