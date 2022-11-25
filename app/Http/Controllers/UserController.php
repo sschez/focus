@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Terapia;
+use App\Models\Sesion;
 
 class UserController extends Controller
 {
@@ -36,8 +38,24 @@ class UserController extends Controller
         $viewData['title'] = 'Paciente '.$user['name'];
         $viewData['subtitle'] = 'Informacion de '.$user['name'];
         $viewData['user'] = $user;
-
-        return view('user.show')->with('viewData', $viewData);
+        $viewData['plotLabels'] = array();
+        $viewData['plotValues'] = array();
+        try {
+            $sesiones = $user->getTerapia()->getNumSesiones();
+            for ($i = 0; $i < $sesiones; $i++) {
+                array_push($viewData['plotLabels'], "Sesión " . ($i + 1));
+            }
+    
+            $sesionList = Sesion::where('terapia_id', $user->getTerapia()->getId())->orderBy('created_at')->get();
+            foreach ($sesionList as $s) {
+                array_push($viewData['plotValues'], $s->getExtensionMax());
+            }
+        } catch (Exception $err) {
+            $viewData['plotLabels'] = array();
+            $viewData['plotValues'] = array();
+        } finally {
+            return view('user.show')->with('viewData', $viewData);
+        }
     }
 
     public function create()
@@ -58,6 +76,7 @@ class UserController extends Controller
     }
     public function destroy($id)
     {
+        Terapia::destroy($id);
         User::destroy($id);
         return redirect()->route('user.index')
             ->with('¡Paciente Eliminado Correctamente!');
