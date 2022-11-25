@@ -16,7 +16,7 @@ class UserApi extends Controller
         $id = $request->input('id');
         $usuario = User::where('document', '=', $id)->find(1);
         $dataApi['data'] = json_encode($usuario);
-        $dataApi['additionalData'] = json_encode([ 'empresa' => 'EAFIT', 'linkEmpresa' => 'http://127.0.0.1:8000/paciente']);;
+        $dataApi['additionalData'] = json_encode([ 'empresa' => 'EAFIT', 'linkEmpresa' => 'http://127.0.0.1:8000/user/all']);;
         return json_encode($dataApi);
     }
 
@@ -25,12 +25,9 @@ class UserApi extends Controller
         $dataApi = [];
         $id = $request->input('id');
         $usuario = User::findOrFail($id);
-        $terapias = [];
-        foreach ($usuario->getTerapias() as $terapia){
-            $terapias[$terapia->getId()] = $terapia->getEjercicio();
-        }
-        $dataApi['data'] = json_encode($terapias);
-        $dataApi['additionalData'] = json_encode([ 'empresa' => 'EAFIT', 'linkEmpresa' => 'http://127.0.0.1:8000/paciente']);
+        $ejercicios = json_decode($usuario->getTerapia()->getEjercicio());
+        $dataApi['data'] = json_encode(["id" => $usuario->getTerapia()->getId(), "ejercicios" => $ejercicios->ejs]);
+        $dataApi['additionalData'] = json_encode([ 'empresa' => 'EAFIT', 'linkEmpresa' => 'http://127.0.0.1:8000/user/terapias']);
         return json_encode($dataApi);
     }
 }
