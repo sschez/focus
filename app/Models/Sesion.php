@@ -4,12 +4,26 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Request;
 
 class Sesion extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['dolor', 'caida', 'numSesion'];
+    protected $fillable = ['dolor', 'caida', 'numSesion','terapia_id','series'];
+
+    public static function validate(Request $request)
+    {
+        $rules= [
+            "dolor" =>          "required",
+            "caida" =>          "required",
+            "numSesion" =>      "required",            
+            "terapia_id" =>     "required",
+            "series" =>         "required",
+        ];
+
+        $request->validate($rules);
+    }
 
     public function getId()
     {
@@ -80,6 +94,7 @@ class Sesion extends Model
     {
         $this->attributes['rangos'] = $rangos;
     }
+    
 
     public function getCreated_at()
     {

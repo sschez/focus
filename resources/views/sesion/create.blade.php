@@ -15,57 +15,74 @@
                             @endforeach
                             </ul>
                             @endif
-
                             <form method="POST" action="{{ route('sesion.save') }}">
                             @csrf
-                            <form class="user">
-                            <div class="row" >
-                                <select name ="numSesion">
-                                                            <option selected = "" disabled="">Numero de Sesion actual </option>
-                                                            <option value= "1" > 1 </option>
-                                                            <option value= "2" > 2 </option>
-                                                            <option value= "3" > 3 </option>
-                                                            <option value= "4" > 4 </option>
-                                                            <option value= "5" > 5 </option>
-                                                            <option value= "6" > 6 </option>
-                                                            <option value= "7" > 7 </option>
-                                                            <option value= "8" > 8 </option>
-                                                            <option value= "9" > 9 </option>
-                                                            <option value= "10" > 10 </option>
-                                 </select> 
-                                <div class="row" >
-                                                <select name ="dolor">
-                                                                <option selected = "" disabled=""> Dolor (1-10) </option>
-                                                                <option value= "1" > 1 </option>
-                                                                <option value= "2" > 2 </option>
-                                                                <option value= "3" > 3 </option>
-                                                                <option value= "4" > 4 </option>
-                                                                <option value= "5" > 5 </option>
-                                                                <option value= "6" > 6 </option>
-                                                                <option value= "7" > 7 </option>
-                                                                <option value= "8" > 8 </option>
-                                                                <option value= "9" > 9 </option>
-                                                                <option value= "10" > 10 </option>
-                                                </select> 
-                                </div>
-                            </div>              
-                                <h6>¿Ha tenido Caidas? </h6>                 
-                                <div class="row">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="caidas" id="si">
-                                    <label class="form-check-label" for="si">
-                                        Si
-                                    </label>
+                                <form class="user">
+                                <div class="form-group row">
+                                    <div class="col-sm-4 mb-3 mb-sm-0">
+                                        <select name ="terapia_id">
+                                                            <option selected = "" disabled=""> Usuario </option>
+                                                            @foreach ($viewData['users'] as $user)
+                                                            <option value= "{{$user->getId()}}" > {{$user->getName()}} </option>
+                                                            @endforeach
+                                        </select> 
+                                        </div>                                    
                                     </div>
-                                    <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="caidas" id="no" checked>
-                                    <label class="form-check-label" for="no">
-                                        No
-                                    </label>
-                                </div>
-                                <input type="submit" class="btn-user btn-block" style="color: white; background-color: #1D3B56" value="Crear Sesion" />
-                            </form>       
-                            </form>                 
+                                    <div class="form-group row">
+                                        <div class="col-sm-6 mb-3 mb-sm-1">
+                                            <select name ="numSesion">
+                                                                        <option selected = "" disabled="">Numero de Sesion actual </option>
+                                                                        <option value= "1" > 1 </option>
+                                                                        <option value= "2" > 2 </option>
+                                                                        <option value= "3" > 3 </option>
+                                                                        <option value= "4" > 4 </option>
+                                                                        <option value= "5" > 5 </option>
+                                                                        <option value= "6" > 6 </option>
+                                                                        <option value= "7" > 7 </option>
+                                                                        <option value= "8" > 8 </option>
+                                                                        <option value= "9" > 9 </option>
+                                                                        <option value= "10" > 10 </option>
+                                            </select> 
+                                        </div>
+    
+                                        <div class="col-sm-4 mb-3 mb-sm-0 my-2" >
+                                                <select name ="series">
+                                                                        <option selected = "" disabled=""> Series </option>
+                                                                        <option value= "5" > 5 </option>
+                                                                        <option value= "10" > 10 </option>
+                                                                        <option value= "12" > 12 </option>
+                                                                        <option value= "15" > 15 </option>
+
+                                                </select> 
+                                        </div>
+                                    </div>                                
+                                    <div class="form-group row">
+                                        <div class="col-sm-6">
+                                            <select name ="caida">
+                                                <option selected = "" disabled=""> ¿Ha tenido caidas? </option>
+                                                <option value= "1" > Si </option>
+                                                <option value= "0" > No </option>
+                                            </select> 
+                                        </div>  
+                                        <div class="col-sm-4 mb-3 mb-sm-0 my-2" >
+                                                <select name ="dolor">
+                                                                        <option selected = "" disabled=""> Dolor (1-10) </option>
+                                                                        <option value= "1" > 1 </option>
+                                                                        <option value= "2" > 2 </option>
+                                                                        <option value= "3" > 3 </option>
+                                                                        <option value= "4" > 4 </option>
+                                                                        <option value= "5" > 5 </option>
+                                                                        <option value= "6" > 6 </option>
+                                                                        <option value= "7" > 7 </option>
+                                                                        <option value= "8" > 8 </option>
+                                                                        <option value= "9" > 9 </option>
+                                                                        <option value= "10" > 10 </option>
+                                                </select> 
+                                        </div>                                      
+                                    </div>
+                                <input type="submit" class="btn-user btn-block" style="color: white; background-color: #1D3B56" value="Crear Paciente" />
+                                </form>       
+                            </form>                              
                         </div>
                  </div>
     <!-- End of Page Wrapper -->
@@ -76,7 +93,4 @@
                     </a>
                 </footer>
 </div>
-@endsection
-@section('scripts')
-
 @endsection

@@ -20,6 +20,7 @@
                         @endif
                         <form method="POST" action="{{ route('user.save') }}">
                             @csrf
+                            
                             <form class="user">
                               <div class="form-group row">
                                  <div class="col-sm-12 mb-3 mb-sm-0">
