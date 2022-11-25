@@ -31,7 +31,7 @@
                                     <video class="img-fluid" autoplay loop muted>
                                         <source src="/images/video/E2.mp4" type="video/mp4" />
                                     </video>
-                                    <div class="carousel-caption d-none d-md-block mx-auto" style="width: 200px; heigth: 800px">
+                                    <div class="carousel-caption d-none d-md-block mx-auto" style="backgorund-color:#1D3B56; width: 200px; heigth: 800px">
                                         <h1 class="badge text-bg-warning"><FONT SIZE=5>Silvia Restrepo</font></h1><br>
                                         <span class="badge text-bg-info"><FONT SIZE=4>Tiempo Restante</font></span>
                                         <span class="badge text-bg-primary"><FONT SIZE=3>28 min</font></span><br>  

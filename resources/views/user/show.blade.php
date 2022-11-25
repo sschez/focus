@@ -7,7 +7,7 @@
 
                     <div class ="row">
                         <div class="col-xl-4 col-lg-7">    
-                            <div class="card shadow mb-4">                    
+                            <div class="card shadow mb-2">                    
                                 <img class="card-img-top" src="{{ asset ('images/usuario.png') }}" alt="Card image cap">
                                     <div class="card-body" style="text-transform:uppercase; ">
                                         <h5 class="card-title"><b>{{ $viewData["user"]["name"] }}</b></h5>
@@ -26,19 +26,18 @@
                                     
                                     
                                 </ul>
-                                <div class="card-body">
-                                    <a href="{{ route('sesion.index')}}" class="btn-list btn btn-outline-primary">Ver progreso</a>
-                                    <p>
+                                <div class="card-body">                                    
                                     <form action="{{ route('user.destroy', $viewData['user']->id) }}" method="POST">
                                         @csrf
                                         @method('delete')
-                                        <button type="submit" class="btn btn-outline-danger">Eliminar</button>
+                                        <center>
+                                        <button type="submit" class="btn btn-outline-danger">Eliminar</button></center>
                                     </form>                        
                                 </div>
                             </div>
                         </div>   
                         <div class="col-xl-8 col-lg-7">    
-                            <div class="card shadow mb-4">                    
+                            <div class="card shadow mb-2">                    
                                 <div class="card-header py-3">
                                         <h6 class="m-0 font-weight-bold text-primary">Sesion VS Promedio de rep VS Ángulo máximo x Sesión</h6>
                                 </div>
@@ -46,7 +45,7 @@
                                     <canvas id="mixChart"></canvas>
                                 </div>
                             </div>
-                            <div class="card shadow mb-4">                    
+                            <div class="card shadow mb-2">                    
                                 <div class="card-header py-3">
                                         <h6 class="m-0 font-weight-bold text-primary">Progreso de Extensión Máxima</h6>
                                 </div>
@@ -54,7 +53,15 @@
                                     <canvas id="myChart"></canvas>
                                 </div>
                             </div>
-                        </div>                      
+                        </div>       
+                        <div class="card shadow mb-2">                    
+                                <div class="card-header py-3">
+                                        <h6 class="m-0 font-weight-bold text-primary">Diagrama de Marcha</h6>
+                                </div>
+                                <div class="card-body w-100 mw-100">
+                                    <canvas id="myChart2"></canvas>
+                                </div>
+                            </div>               
     </div>                   
     <footer class="sticky-footer bg-white">
         <a class="text-center" href="{{ route('home.index') }}" style="width: 26rem;position:relative; top:0px; left:550px" >
@@ -130,5 +137,27 @@
       config
     );
 
+</script>
+<script defer>
+        const ctx = document.getElementById('myChart2');
+
+        new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: {!! json_encode($viewData['plotLabels']) !!},
+            datasets: [{
+            label: 'Progreso',
+            data: {!! json_encode($viewData['plotValues']) !!},
+            borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+            y: {
+                beginAtZero: true
+            }
+            }
+        }
+        });        
 </script>
 @endsection
