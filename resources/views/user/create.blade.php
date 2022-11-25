@@ -30,6 +30,7 @@
                                   <div class="col-sm-6 mb-3 mb-sm-1">
                                      <input type="text" class="form-control form-control-user" placeholder="Numero Identificacion" name="document" value="{{ old('document') }}" />
                                     </div>
+ 
                                 <div class="col-sm-4 mb-3 mb-sm-0 my-2" >
                                             <select name ="typedoc">
                                                 <option selected = "" disabled=""> Tipo de Documento </option>
@@ -41,11 +42,16 @@
                                 </div>                                
                                 <div class="form-group row">
                                     <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user" placeholder="Nombre Emergencia" name="nameem" value="{{ old('nameem') }}" />
+                                        <input type="text" class="form-control form-control-user" placeholder="Edad" name="edad" value="{{ old('edad') }}" />
                                     </div>
                                     <div class="col-sm-6">
-                                         <input type="text" class="form-control form-control-user" placeholder="Contacto Emergencia" name="numem" value="{{ old('numem') }}" />                                        
+                                    <textarea class="form-control form-control-user" name="antec" value="{{ old('antec') }}" > Antecedentes </textarea>                                       
                                     </div>
+                                </div>
+                                <div class="form-group row">
+                                <div class="col-sm-12 mb-3 mb-sm-4">
+                                     <textarea class="form-control form-control-user" name="recomend" value="{{ old('recomend') }}" > Recomendaciones </textarea>
+                                    </div>   
                                 </div>
                                 <input type="submit" class="btn-user btn-block" style="color: white; background-color: #1D3B56" value="Crear Paciente" />
                             </form>       

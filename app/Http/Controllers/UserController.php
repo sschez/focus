@@ -70,7 +70,7 @@ class UserController extends Controller
     {
         User::validate($request);
         //dd($request->all());
-        User::create($request->only(["name","document","typedoc","nameem","numem"]));
+        User::create($request->only(["name","document","typedoc","edad","recomend","antec"]));
 
         return back();
     }

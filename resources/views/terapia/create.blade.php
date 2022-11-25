@@ -23,14 +23,6 @@
                             @csrf
                             <form class="user">
                               <div class="form-group row">
-                              <select name ="doctor">
-                                                            <option selected = "" disabled=""> Nombre doctor </option>
-                                                            <option value= "Jorge Zapata" > Jorge Zapata </option>
-                                                            <option value= "Diego Bustamante" > Diego Bustamante </option>
-                                                            <option value= "Andres Riveras" > Andres Riveras </option>
-                                            </select>                                    
-                                 </div>
-                                <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-1" >
                                                 <select name ="user_id">
                                                     <option selected = "" disabled=""> Usuario </option>
@@ -38,7 +30,26 @@
                                                     <option value= "{{$user->getId()}}" > {{$user->getName()}} </option>
                                                     @endforeach
                                                 </select> 
-                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 mb-3 mb-sm-4">
+                                                    <select name ="doctor">
+                                                                    <option selected = "" disabled=""> Nombre doctor </option>
+                                                                    <option value= "Jorge Zapata" > Jorge Zapata </option>
+                                                                    <option value= "Diego Bustamante" > Diego Bustamante </option>
+                                                                    <option value= "Andres Riveras" > Andres Riveras </option>
+                                                    </select>  
+                                    </div>   
+                                        
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-4" >
+                                            <select name ="ejercicio">
+                                                            <option selected = "" disabled="">Ejercicio</option>
+                                                            <option value= "{{ '{"1": "Extension Hombro"}' }}" > Extension Hombro </option>
+                                                            <option value= "{{ '{"1": "Extension Hombro", "2": "Extension Abductores "}' }}" > Extension Hombro y Abductores </option>
+                                                            <option value= "{{ '{"1": "Extension Abductores "}' }}" > Extension Abductores </option>
+                                            </select> 
+                                    </div>
                                     <div class="col-sm-4 mb-3 mb-sm-4" >
                                             <select name ="numSesiones">
                                                             <option selected = "" disabled=""> Numero de sesiones </option>
@@ -56,18 +67,12 @@
                                     </div>
                                 </div>                                
                                 <div class="form-group row">
-                                <div class="col-sm-12 mb-3 mb-sm-4" >
-                                            <select name ="ejercicio">
-                                                            <option selected = "" disabled="">Ejercicio</option>
-                                                            <option value= "{{ '{"1": "Extension Hombro"}' }}" > Extension Hombro </option>
-                                                            <option value= "{{ '{"1": "Extension Hombro", "2": "Extension Rodilla"}' }}" > Extension Hombro y Rodilla </option>
-                                            </select> 
-                                    </div>
+                               
                                     <div class="col-sm-12 mb-3 mb-sm-4">
-                                     <textarea class="form-control form-control-user" name="condicionMedica" value="{{ old('condicionMedica') }}"> Condicion Médica</textarea>
+                                     <textarea class="form-control form-control-user" name="condicionMedica" value="{{ old('condicionMedica') }}" > Condicion Médica </textarea>
                                     </div>                                    
                                 </div>
-                                <input type="submit" class="btn-user btn-block" style="color: white; background-color: #1D3B56" value="Crear Paciente" />
+                                <input type="submit" class="btn-user btn-block" style="color: white; background-color: #1D3B56" value="Crear Terapia" />
                             </form>       
                             </form>                 
                         </div>

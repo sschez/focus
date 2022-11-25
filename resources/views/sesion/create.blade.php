@@ -8,9 +8,6 @@
                     <div class="col-lg-4 mx-3 d-none d-lg-block bg-register-image"></div>
                     <div class="col-lg-7">
                         <div class="p-5">
-                            <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Crear Sesión</h1>
-                            </div>
                             @if($errors->any())
                             <ul id="errors" class="alert alert-danger list-unstyled">
                             @foreach($errors->all() as $error)
@@ -22,8 +19,8 @@
                             <form method="POST" action="{{ route('sesion.save') }}">
                             @csrf
                             <form class="user">
-                            <div class="col-sm-4 mb-3 mb-sm-4" >
-                                            <select name ="dolor">
+                            <div class="row" >
+                                <select name ="numSesion">
                                                             <option selected = "" disabled="">Numero de Sesion actual </option>
                                                             <option value= "1" > 1 </option>
                                                             <option value= "2" > 2 </option>
@@ -35,32 +32,25 @@
                                                             <option value= "8" > 8 </option>
                                                             <option value= "9" > 9 </option>
                                                             <option value= "10" > 10 </option>
-                                            </select> 
-                                    </div>
-                                <div class="form-group row">
-                                    <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker" name ="fechaCita" inline="true">
-                                        <input placeholder="Select date" id = "example" type="text" class="form-control">
-                                        <label for="example">Fecha</label>
-                                        <i class="fas fa-calendar input-prefix"></i>
-                                    </div>
-                                    <div class="col-sm-4 mb-3 mb-sm-4" >
-                                            <select name ="dolor">
-                                                            <option selected = "" disabled=""> Dolor (1-10) </option>
-                                                            <option value= "1" > 1 </option>
-                                                            <option value= "2" > 2 </option>
-                                                            <option value= "3" > 3 </option>
-                                                            <option value= "4" > 4 </option>
-                                                            <option value= "5" > 5 </option>
-                                                            <option value= "6" > 6 </option>
-                                                            <option value= "7" > 7 </option>
-                                                            <option value= "8" > 8 </option>
-                                                            <option value= "9" > 9 </option>
-                                                            <option value= "10" > 10 </option>
-                                            </select> 
-                                    </div>
-                                </div>               
-                                <h6>Has tenido Caidas </h6>                 
-                                <div class="form-group row">
+                                 </select> 
+                                <div class="row" >
+                                                <select name ="dolor">
+                                                                <option selected = "" disabled=""> Dolor (1-10) </option>
+                                                                <option value= "1" > 1 </option>
+                                                                <option value= "2" > 2 </option>
+                                                                <option value= "3" > 3 </option>
+                                                                <option value= "4" > 4 </option>
+                                                                <option value= "5" > 5 </option>
+                                                                <option value= "6" > 6 </option>
+                                                                <option value= "7" > 7 </option>
+                                                                <option value= "8" > 8 </option>
+                                                                <option value= "9" > 9 </option>
+                                                                <option value= "10" > 10 </option>
+                                                </select> 
+                                </div>
+                            </div>              
+                                <h6>¿Ha tenido Caidas? </h6>                 
+                                <div class="row">
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="caidas" id="si">
                                     <label class="form-check-label" for="si">
@@ -73,7 +63,7 @@
                                         No
                                     </label>
                                 </div>
-                                <input type="submit" class="btn-user btn-block" style="color: white; background-color: #1D3B56" value="Crear Paciente" />
+                                <input type="submit" class="btn-user btn-block" style="color: white; background-color: #1D3B56" value="Crear Sesion" />
                             </form>       
                             </form>                 
                         </div>
@@ -86,4 +76,7 @@
                     </a>
                 </footer>
 </div>
+@endsection
+@section('scripts')
+
 @endsection

@@ -59,8 +59,8 @@
                                                 </td>
                                                 <td>                         
                                                     <!---<a href="{{ route('terapia.show', ['id' => $terapia->getId()]) }}"-->                           
-                                                    <a href="#"
-                                                        class="table table-bordered btn btn-outline-success">Ver Progreso</a>
+                                                    <a href="{{ route('sesion.create') }}"
+                                                        class="table table-bordered btn btn-outline-success">Crear Sesion</a>
                                                         <form action="{{ route('terapia.destroy', $terapia->id) }}" method="POST">
                                                             @csrf
                                                             @method('delete')
