@@ -24,7 +24,8 @@ return new class extends Migration
             $table->json('rangos')->nullable();
             $table->dateTime('fechaCita');
             $table->unsignedBigInteger('terapia_id');
-            $table->foreign('terapia_id')->references('id')->on('terapias');
+            $table->foreign('terapia_id')->references('id')->on('terapias')
+            ->onDelete('cascade');
             $table->timestamps();
         });
     }

@@ -34,8 +34,8 @@
                                     <div class="col-sm-6 mb-3 mb-sm-1" >
                                                 <select name ="user_id">
                                                     <option selected = "" disabled=""> Usuario </option>
-                                                    @foreach ($viewData['terapias'] as $terapia)
-                                                    <option value= "{{($terapia->getUser()['id'])}}" > {{$terapia->getUser()['name']}} </option>
+                                                    @foreach ($viewData['users'] as $user)
+                                                    <option value= "{{$user->getId()}}" > {{$user->getName()}} </option>
                                                     @endforeach
                                                 </select> 
                                         </div>
@@ -59,7 +59,8 @@
                                 <div class="col-sm-12 mb-3 mb-sm-4" >
                                             <select name ="ejercicio">
                                                             <option selected = "" disabled="">Ejercicio</option>
-                                                            <option value= "Extension Hombro" > Extension Hombro </option>
+                                                            <option value= "{{ '{"1": "Extension Hombro"}' }}" > Extension Hombro </option>
+                                                            <option value= "{{ '{"1": "Extension Hombro", "2": "Extension Rodilla"}' }}" > Extension Hombro y Rodilla </option>
                                             </select> 
                                     </div>
                                     <div class="col-sm-12 mb-3 mb-sm-4">

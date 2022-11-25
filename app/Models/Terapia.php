@@ -33,6 +33,16 @@ class Terapia extends Model
         $this->attributes['id'] = $id;
     }
 
+    public function getNumSesiones()
+    {
+        return $this->attributes['numSesiones'];
+    }
+
+    public function setNumSesiones($numSesiones)
+    {
+        $this->attributes['numSesiones'] = $numSesiones;
+    }
+
     public function getDoctor()
     {
         return $this->attributes['doctor'];
@@ -99,6 +109,7 @@ class Terapia extends Model
         $this->user = $user;
     }
 
+    
     //--------------------------------------------------------
     public function sesion()
     {

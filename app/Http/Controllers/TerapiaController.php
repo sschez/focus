@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Terapia;
+use App\Models\User ;
 
 class TerapiaController extends Controller
 {
@@ -45,6 +46,7 @@ class TerapiaController extends Controller
         $viewData = []; //to be sent to the view
         $viewData['title'] = 'Crear Terapia';
         $viewData['terapias'] = Terapia::all();
+        $viewData['users'] = User::all();
         return view('terapia.create')->with('viewData', $viewData);
     }
 

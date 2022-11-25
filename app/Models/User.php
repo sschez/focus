@@ -97,18 +97,19 @@ class User extends Model
         $this->attributes['numem'] = $numem;
     }
 
-    public function Therapy()
+    public function Terapia()
     {
-        return $this->hasMany(Therapy::class);
+        return $this->hasOne(Terapia::class);
     }
 
-    public function getTherapy()
+    public function getTerapia()
     {
-        return $this->therapy;
+        return $this->terapia;
     }
 
-    public function setTherapy($therapy)
+    public function setTerapia($terapia)
     {
-        $this->therapy = $therapy;
+        $this->terapia = $terapia;
     }
+
 }
