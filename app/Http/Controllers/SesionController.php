@@ -51,6 +51,7 @@ class SesionController extends Controller
     {
         $viewData = []; //to be sent to the view
         $viewData['title'] = 'Crear Sesion';
+        $viewData['users'] = User::all();
 
         return view('sesion.create')->with('viewData', $viewData);
     }
@@ -59,7 +60,7 @@ class SesionController extends Controller
     {
         Sesion::validate($request);
         //dd($request->all());
-        Sesion::create($request->only(["dolor","caida","numSesion"]));
+        Sesion::create($request->only(["dolor","caida","numSesion","terapia_id","series"]));
 
         return back();
     }
