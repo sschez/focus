@@ -56,7 +56,7 @@
                         </div>       
                         <div class="card shadow mb-2">                    
                                 <div class="card-header py-3">
-                                        <h6 class="m-0 font-weight-bold text-primary">Diagrama de Marcha</h6>
+                                        <h6 class="m-0 font-weight-bold text-primary">Diagrama de Movimiento</h6>
                                 </div>
                                 <div class="card-body w-100 mw-100">
                                     <canvas id="myChart2"></canvas>
