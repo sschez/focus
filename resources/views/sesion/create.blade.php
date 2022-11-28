@@ -80,14 +80,14 @@
                                                 </select> 
                                         </div>                                      
                                     </div>
-                                <input type="submit" class="btn-user btn-block" style="color: white; background-color: #1D3B56" value="Crear Paciente" />
+                                <input type="submit" class="btn-user btn-block" style="color: white; background-color: #1D3B56" value="Crear Sesión" />
                                 </form>       
                             </form>                              
                         </div>
                  </div>
     <!-- End of Page Wrapper -->
                 <footer class="sticky-footer bg-white">
-                <a class="text-center" href="{{ route('home.index') }}" style="width: 26rem;position:relative; top:0px; left:350px" >
+                <a class="text-center" href="{{ route('home.index') }}" style="width: 26rem;position:relative; top:0px; left:550px" >
                         <img class="img-fluid " style="width: 15rem;"
                                 src="{{ asset ('images/logo.png')}}" alt="...">
                     </a>

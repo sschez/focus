@@ -17,12 +17,12 @@
                                 <video class="img-fluid" autoplay loop muted>
                                     <source src="/images/video/E1.mp4" type="video/mp4" />
                                 </video>
-                                    <div class="carousel-caption d-none d-md-block mx-auto" style="width: 200px; heigth: 800px">
-                                        <h1 class="badge text-bg-success"><FONT SIZE=5>Martha Restrepo</font></h1><br>
-                                        <span class="badge text-bg-info"><FONT SIZE=4>Tiempo Restante</font></span>
-                                        <span class="badge text-bg-primary"><FONT SIZE=3>42 min</font></span><br>  
-                                        <span class="badge text-bg-info"><FONT SIZE=4>Ejercicio</font></span>                                      
-                                        <span class="badge text-bg-primary"><FONT SIZE=3>Abducción de Hombros</font></span>
+                                    <div class="carousel-caption d-none d-md-block mx-auto" style="backgorund-color:#1D3B56; width: 200px; heigth: 800px">
+                                        <h1 class="badge text-bg-success"><FONT SIZE=5 Color=black>Martha Restrepo</font></h1>
+                                        <span class="badge text-bg-light"><FONT SIZE=4 Color=#1D3B56>TIEMPO RESTANTE: </font></span>
+                                        <span class="badge text-bg-light"><FONT SIZE=3 Color=#1D3B56>42 min</font></span> <br>
+                                        <span class="badge text-bg-dark"><FONT SIZE=4 >EJERCICIO: </font></span>                                      
+                                        <span class="badge text-bg-dark"><FONT SIZE=3 >Abducción de Hombros</font></span>
                                         
                                     </div>
                                 </div>
@@ -32,22 +32,22 @@
                                         <source src="/images/video/E2.mp4" type="video/mp4" />
                                     </video>
                                     <div class="carousel-caption d-none d-md-block mx-auto" style="backgorund-color:#1D3B56; width: 200px; heigth: 800px">
-                                        <h1 class="badge text-bg-warning"><FONT SIZE=5>Silvia Restrepo</font></h1><br>
-                                        <span class="badge text-bg-info"><FONT SIZE=4>Tiempo Restante</font></span>
-                                        <span class="badge text-bg-primary"><FONT SIZE=3>28 min</font></span><br>  
-                                        <span class="badge text-bg-info"><FONT SIZE=4>Ejercicio</font></span>                                      
-                                        <span class="badge text-bg-primary"><FONT SIZE=3>Abducción de Cadera</font></span>
+                                        <h1 class="badge text-bg-warning"><FONT SIZE=5 Color=black>Silvia Restrepo</font></h1><br>
+                                        <span class="badge text-bg-light"><FONT SIZE=4 Color=#1D3B56>TIEMPO RESTANTE: </font></span>
+                                        <span class="badge text-bg-light"><FONT SIZE=3 Color=#1D3B56>28 min</font></span><br>  
+                                        <span class="badge text-bg-dark"><FONT SIZE=4>EJERCICIO</font></span>                                      
+                                        <span class="badge text-bg-dark"><FONT SIZE=3>Abducción de Cadera</font></span>
                                     </div>
                                 </div>
                                 <div class="carousel-item" data-bs-interval="4000">
                                 <h1 class="badge text-bg-primary mx-auto"><FONT SIZE=5>MODULO 3</font></h1>
                                     <img src="/images/A3.png" class="d-block w-100" alt="..." >
-                                    <div class="carousel-caption d-none d-md-block mx-auto" style="width: 200px; heigth: 800px">
-                                        <h1   class= "badge text-bg-danger"><FONT SIZE=5>Patricio Azlate</font></h1><br>
-                                        <span class="badge text-bg-info"><FONT SIZE=4>Tiempo Restante</font></span>
-                                        <span class="badge text-bg-primary"><FONT SIZE=3>15 min</font></span><br>  
-                                        <span class="badge text-bg-info"><FONT SIZE=4>Ejercicio</font></span>                                      
-                                        <span class="badge text-bg-primary"><FONT SIZE=3>Abducción de Cadera</font></span>
+                                    <div class="carousel-caption d-none d-md-block mx-auto" style="backgorund-color:#1D3B56; width: 200px; heigth: 800px">
+                                        <h1   class= "badge text-bg-danger"><FONT SIZE=5 Color=black>Patricio Azlate</font></h1><br>
+                                        <span class="badge text-bg-light"><FONT SIZE=4 Color=#1D3B56>TIEMPO RESTANTE: </font></span>
+                                        <span class="badge text-bg-light"><FONT SIZE=3 Color=#1D3B56>15 min</font></span><br>  
+                                        <span class="badge text-bg-dark"><FONT SIZE=4>EJERCICIO</font></span>                                      
+                                        <span class="badge text-bg-dark"><FONT SIZE=3>Abducción de Cadera</font></span>
                                     </div>
                                 </div>
                             </div>

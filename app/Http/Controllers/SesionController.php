@@ -51,18 +51,30 @@ class SesionController extends Controller
     {
         $viewData = []; //to be sent to the view
         $viewData['title'] = 'Crear Sesion';
-        $viewData['users'] = User::all();
+        
+        try{
+            $viewData['users'] = User::all();
+        }catch(Exception $err){
 
-        return view('sesion.create')->with('viewData', $viewData);
+        } finally{
+            return view('sesion.create')->with('viewData', $viewData);
+        }
+        
     }
 
     public function save(Request $request)
     {
         Sesion::validate($request);
-        //dd($request->all());
-        Sesion::create($request->only(["dolor","caida","numSesion","terapia_id","series"]));
+        try{
+            Sesion::create($request->only(["dolor","caida","numSesion","terapia_id","series"]));
+        }catch(Exception $err){
 
-        return back();
+        }finally{
+            return back();
+        }
+        
+
+        
     }
     public function destroy($id)
     {
