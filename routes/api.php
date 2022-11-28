@@ -20,4 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('/user/all', 'App\Http\Controllers\Api\UserApi@all')->name("api.user.all");
 Route::post('/user/terapias', 'App\Http\Controllers\Api\UserApi@terapias')->name("api.user.terapias");
+Route::post('/terapia/sesiones', 'App\Http\Controllers\Api\TerapiaApi@sesiones')->name("api.terapia.sesiones");
 Route::post('/sesion/all', 'App\Http\Controllers\Api\SesionApi@all')->name("api.sesion.all");
