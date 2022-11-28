@@ -63,7 +63,7 @@
             <!-- End of Main Content -->
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
-                    <a class="text-center" href="{{ route('home.index') }}" style="width: 26rem;position:relative; top:0px; left:750px" >
+                    <a class="text-center" href="{{ route('home.index') }}" style="width: 26rem;position:relative; top:0px; left:550px" >
                         <img class="img-fluid " style="width: 15rem;"
                                 src="{{ asset ('images/logo.png')}}" alt="...">
                     </a>

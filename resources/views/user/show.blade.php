@@ -6,7 +6,7 @@
     <div class ="row">             
 
                     <div class ="row">
-                        <div class="col-xl-4 col-lg-7">    
+                        <div class="col-xl-3 col-lg-5">    
                             <div class="card shadow mb-2">                    
                                 <img class="card-img-top" src="{{ asset ('images/usuario.png') }}" alt="Card image cap">
                                     <div class="card-body" style="text-transform:uppercase; ">
@@ -54,14 +54,14 @@
                                 </div>
                             </div>
                         </div>       
-                        <div class="card shadow mb-2">                    
+                        <!-- <div class="card shadow mb-2">                    
                                 <div class="card-header py-3">
                                         <h6 class="m-0 font-weight-bold text-primary">Diagrama de Movimiento</h6>
                                 </div>
                                 <div class="card-body w-100 mw-100">
                                     <canvas id="myChart2"></canvas>
                                 </div>
-                            </div>               
+                        </div>                -->
     </div>                   
     <footer class="sticky-footer bg-white">
         <a class="text-center" href="{{ route('home.index') }}" style="width: 26rem;position:relative; top:0px; left:550px" >
@@ -73,28 +73,6 @@
 @endsection
 
 @section('scripts')
-<script defer>
-        const ctx = document.getElementById('myChart');
-
-        new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: {!! json_encode($viewData['plotLabels']) !!},
-            datasets: [{
-            label: 'Progreso',
-            data: {!! json_encode($viewData['plotValues']) !!},
-            borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-            y: {
-                beginAtZero: true
-            }
-            }
-        }
-        });        
-</script>
 <script defer>
 
     const data = {
@@ -137,6 +115,28 @@
       config
     );
 
+</script>
+<script defer>
+        const ctx = document.getElementById('myChart');
+
+        new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: {!! json_encode($viewData['plotLabels']) !!},
+            datasets: [{
+            label: 'Progreso',
+            data: {!! json_encode($viewData['plotValues']) !!},
+            borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+            y: {
+                beginAtZero: true
+            }
+            }
+        }
+        });        
 </script>
 <script defer>
         const ctx = document.getElementById('myChart2');

@@ -5,7 +5,7 @@
                 <div class="container">
                     <!-- Content Row -->
                     <div class="container">
-                        <div id="carouselExampleCaptions" class="carousel slide mx-auto" data-bs-ride="carousel" style="heigth: 800px">
+                        <div id="carouselExampleCaptions" class="carousel slide mx-auto" data-bs-ride="carousel" style="heigth: 500px">
                             <div class="carousel-indicators">
                             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -13,7 +13,7 @@
                             </div>
                             <div class="carousel-inner mx-auto" style="width: 400px; heigth: 200px">
                                 <div class="carousel-item active" data-bs-interval="4000">
-                                <h1 class="badge text-bg-primary mx-auto"><FONT SIZE=5>MODULO 1</font></h1>
+                                <h1 class="badge text-bg-dark mx-auto"><FONT SIZE=5>MODULO 1</font></h1>
                                 <video class="img-fluid" autoplay loop muted>
                                     <source src="/images/video/E1.mp4" type="video/mp4" />
                                 </video>
@@ -27,7 +27,7 @@
                                     </div>
                                 </div>
                                 <div class="carousel-item" data-bs-interval="4000">
-                                <h1 class="badge text-bg-primary mx-auto"><FONT SIZE=5>MODULO 2</font></h1>
+                                <h1 class="badge text-bg-dark mx-auto"><FONT SIZE=5>MODULO 2</font></h1>
                                     <video class="img-fluid" autoplay loop muted>
                                         <source src="/images/video/E2.mp4" type="video/mp4" />
                                     </video>
@@ -40,7 +40,7 @@
                                     </div>
                                 </div>
                                 <div class="carousel-item" data-bs-interval="4000">
-                                <h1 class="badge text-bg-primary mx-auto"><FONT SIZE=5>MODULO 3</font></h1>
+                                <h1 class="badge text-bg-dark mx-auto"><FONT SIZE=5>MODULO 3</font></h1>
                                     <img src="/images/A3.png" class="d-block w-100" alt="..." >
                                     <div class="carousel-caption d-none d-md-block mx-auto" style="backgorund-color:#1D3B56; width: 200px; heigth: 800px">
                                         <h1   class= "badge text-bg-danger"><FONT SIZE=5 Color=black>Patricio Azlate</font></h1><br>
@@ -115,7 +115,7 @@
                                         <td></td>
                                         <td>Martha Restrepo<br>
                                         Silvana Restrepo<br>
-                                        Albeiro Alzate</td>
+                                        Patricio Alzate</td>
                                         <td></td>
                                     </tr>
                                     <tr>
@@ -138,12 +138,12 @@
                                     </tr>
                                     <tr>
                                     <th class="table-success" style="color:black" scope="row">12:00 m</th>
-                                        <td>Albeiro Alzate</td>
-                                        <td>Albeiro Alzate</td>
-                                        <td>Albeiro Alzate</td>
-                                        <td>Albeiro Alzate</td>
+                                        <td>Patricio Alzate</td>
+                                        <td>Patricio Alzate</td>
+                                        <td>Patricio Alzate</td>
+                                        <td>Patricio Alzate</td>
                                         <td></td>
-                                        <td>Albeiro Alzate</td>
+                                        <td>Patricio Alzate</td>
                                     </tr>
                                     <tr>
                                     <th class="table-success" style="color:black" scope="row">2:00 pm</th>

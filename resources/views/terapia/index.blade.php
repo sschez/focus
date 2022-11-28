@@ -32,7 +32,6 @@
                                             <th>Nombre</th>                                            
                                             <th>Doctor</th>
                                             <th>Condicion Médica</th>
-                                            <th>Ejercicio</th>
                                             <th>Sesion</th>
                                         </tr>
                                     </thead>
@@ -53,10 +52,6 @@
                                                     {{ $terapia->getCondicionMedica() }}
                                                     
                                                 </td>                                                  
-                                                <td>                                                    
-                                                    {{ $terapia->getEjercicio() }}
-                                                    
-                                                </td>
                                                 <td>                         
                                                     <!---<a href="{{ route('terapia.show', ['id' => $terapia->getId()]) }}"-->                           
                                                     <a href="{{ route('sesion.create') }}"
